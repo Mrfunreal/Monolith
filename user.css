@@ -1,12 +1,9 @@
-/*
-TODO
 
-Make right half of player overlay with player itself. Volume bar is stupid small on non fullscreen, or on smaller monitors.
-Player bar lower so addons like oneko fit
-
-*/
 /* ------------------------------------ New Font ------------------------------------*/
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
+  font-family: 'Noto Sans', sans-serif !important;
+}
 /* ------------------------------------ Base color changes ------------------------------------*/
 :root,
 .encore-dark-theme .encore-bright-accent-set,
