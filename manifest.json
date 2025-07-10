@@ -1,0 +1,26 @@
+{
+  "name": "Monolith",
+  "description": "Dark, sleek, simple, customizable. Based on 'Accented'",
+  "preview": "./img/logo.png",
+  "readme": "./README.md",
+  "usercss": "./user.css",
+  "schemes": "./color.ini",
+  "authors": [
+    {
+      "name": "MrFunreal",
+      "url": "https://github.com/Mrfunreal"
+    },
+    {
+      "name": "Luximus",
+      "url": "https://github.com/luximus-hunter"
+    },
+    {
+      "name": "A",
+      "url": "https://github.com/updxg"
+    },
+    {
+      "name": "Luca Ribon",
+      "url": "https://github.com/lucaribon"
+    }
+  ]
+}
