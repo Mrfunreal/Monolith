@@ -209,11 +209,11 @@ Butt Fuck it, it works. I don't dare to question it. it took long enough to figu
 .main-trackList-curationButton:not(.e-9960-baseline) .e-9960-button__icon-wrapper div > div {
   filter: brightness(100%) invert(1) saturate(500%);
 }*/
-
+/*
 .main-trackList-curationButton:not(.e-9960-icon):not(.e-9960-baseline):not(.some-plus-class) .e-9960-button__icon-wrapper div > div {
   filter: brightness(100%) invert(1) saturate(500%);
 }
-
+*/
 /*
 .Button-sc-1dqy6lx-0
 .Button-buttonTertiary-small-iconOnly-useBrowserDefaultFocusStyle-condensed
@@ -222,6 +222,51 @@ Butt Fuck it, it works. I don't dare to question it. it took long enough to figu
 .e-9960-button-tertiary--condensed
 .main-trackList-curationButton
 */
+
+.main-trackList-curationButton:not(.e-9960-icon):not(.e-9960-baseline):not(.some-plus-class) .e-9960-button__icon-wrapper div > div {
+ /* filter: brightness(100%)  saturate(000%);*/
+	opacity: 0 !important;
+}
+/* Only show the custom ::after when there's NOT a visible SVG icon */
+/* doesn't quite work. color layering and such.
+.main-trackList-curationButton:not(:has(.e-9960-icon.e-9960-baseline))::before {
+  content: '' !important;
+  position: relative !important;
+  right: 0px !important;
+  top: 6px !important;
+  height: 18px !important;
+  width: 18px !important;
+  background-image: url('https://raw.githubusercontent.com/Mrfunreal/Monolith/refs/heads/main/img/wait_hollow.gif') !important;
+  content: '' !important;
+  position: absolute !important;
+  background-size: cover  !important; 
+  background-color: var(--spice-color) !important;
+ pointer-events: none !important;
+  z-index: 9999999999999999999 !important;
+}*/
+
+.main-trackList-curationButton:not(:has(.e-9960-icon.e-9960-baseline))::after {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--spice-color);
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  position: absolute;
+  top: 6px;
+  right: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* -------------------------------------------------- Playbar Section  --------------------------------------------------*/
 
 /* ------------------------------------ Now Playing (Bottom left) ------------------------------------*/
@@ -300,7 +345,7 @@ background-size: 34px 34px !important;
 background-image: url('https://raw.githubusercontent.com/Mrfunreal/Monolith/refs/heads/main/img/Equalizer%20Hollow.gif') !important;
 background-color: var(--spice-color) !important;
 pointer-events: none !important;
- }
+}
 
 
 /*IN PLAYLIST*/
@@ -312,31 +357,31 @@ pointer-events: none !important;
 
 /*Adds Bright playing equalizer*/
 .main-trackList-active::before {
-  content: '' !important;
-  position: absolute !important;
-	left:5px !important;
-	top: 12px !important;
-  height: 30px !important;
-  width: 30px !important;
-  background-size: cover  !important; 
-  background-image: url('https://raw.githubusercontent.com/Mrfunreal/Monolith/main/img/Equalizer%20Hollow.gif') !important;
-  background-color: var(--spice-color) !important;
-  pointer-events: none !important;
-  z-index: -1 !important;
+content: '' !important;
+position: absolute !important;
+left:5px !important;
+top: 12px !important;
+height: 30px !important;
+width: 30px !important;
+background-size: cover  !important; 
+background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><defs><mask id='bars-mask'><rect width='30' height='30' fill='white'/><rect x='2' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='5;20;10;15;10' dur='0.8s' repeatCount='indefinite'/><animate attributeName='y' values='15;5;10;7;10' dur='0.8s' repeatCount='indefinite'/></rect><rect x='9' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='10;15;5;20;10' dur='0.9s' repeatCount='indefinite'/><animate attributeName='y' values='10;7;15;5;10' dur='0.9s' repeatCount='indefinite'/></rect><rect x='16' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='15;5;20;10;15' dur='0.7s' repeatCount='indefinite'/><animate attributeName='y' values='7;15;5;10;7' dur='0.7s' repeatCount='indefinite'/></rect><rect x='23' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='10;20;15;5;10' dur='0.85s' repeatCount='indefinite'/><animate attributeName='y' values='10;5;7;15;10' dur='0.85s' repeatCount='indefinite'/></rect></mask></defs><rect width='30' height='30' fill='%23101010' mask='url(%23bars-mask)'/></svg>");
+background-color: var(--spice-color) !important;
+pointer-events: none !important;
+z-index: -1 !important;
 }
-/*Adds Bright paused equalizer*/
+/*Adds dark paused equalizer*/
 .main-trackList-active::after {
-  content: '' !important;
-  position: absolute !important;
-	left:5px !important;
-	top: 12px !important;
-  height: 30px !important;
-  width: 30px !important;
-  background-size: cover  !important; 
-  background-image: url('https://raw.githubusercontent.com/Mrfunreal/Monolith/main/img/Equalizer%20Hollow.gif') !important;
-  background-color: var(--spice-inactive) !important;
-  pointer-events: none !important;
-  z-index: -1 !important;
+content: '' !important;
+position: absolute !important;
+left:5px !important;
+top: 12px !important;
+height: 30px !important;
+width: 30px !important;
+background-size: cover  !important; 
+background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><defs><mask id='dots'><rect width='30' height='30' fill='white'/><circle cx='5' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0s'/></circle><circle cx='12' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0.15s'/></circle><circle cx='19' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0.3s'/></circle><circle cx='26' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0.45s'/></circle></mask></defs><rect width='30' height='30' fill='%23101010' mask='url(%23dots)'/></svg>");
+background-color: var(--spice-color) !important;
+pointer-events: none !important;
+z-index: -1 !important;
 }
 /* When .main-trackList-number is NOT present, hide the paused GIF */
 .main-trackList-active:not(:has(.main-trackList-number))::after {
