@@ -69,9 +69,7 @@
 }
 
 /*  ------------------------------------ backgrounds of selected text in track list  ------------------------------------*/
-.main-rootlist-wrapper {
-  --spice-rgb-selected-row: var(--spice-rgb-color); !important;
-}
+
 
 /* ------------------------------------ selected options above library ------------------------------------*/
 .f5yairu2OwqKcOecHnkA {
@@ -82,6 +80,7 @@
 /*lowers text and play icon a little to be better centered in box*/
 .HeaderArea, .jpzxju {
  align-items: flex-end;
+	padding-left: 6px;
 }
 .e-9960-icon .e-9960-baseline, .IZq_xBKdh88HLD4QY90X  {
   width:50px
@@ -100,6 +99,8 @@
   left: -5px;
   width: 101%
 }
+
+
 /* Note about the library items boxes:
 BRX6aJUAuAsvHKD_fpbo affects ALL items
 e-9960-box--naked.e-9960-box--interactive only alters the items you hover over if that item is not opened.
@@ -165,6 +166,7 @@ Its hella werid coding. But hey, it do be working.
   right: 50
 }
 /* ------------------------------------ TRACKLIST EDITS (thing housing all songs) ------------------------------------*/
+/*bigger play buttons*/
 .main-trackList-rowImagePlayButton {
     color: var(--spice-color) !important;
     left: -8px;
@@ -176,6 +178,18 @@ Its hella werid coding. But hey, it do be working.
 .main-trackList-curationButton[aria-checked=false] {
     opacity: 1
 }
+/*BG color and border on playing track*/
+.main-trackList-trackListRow.main-trackList-active {
+background-color: rgba(var(--spice-rgb-color), 0.1) !important;
+border: 1px solid var(--spice-color) !important;
+box-sizing: border-box;
+border-style: dotted;
+}
+/*BG of hovered over and selected tracks.*/
+.main-rootlist-wrapper {
+  --spice-rgb-selected-row: var(--spice-rgb-color); !important;
+}
+
 /*------------------------------------------------------------------*/
 /*These two TOGETHER color the animated checkmark when adding and removing things to playlist
 The top one inverts colors for all checkmarks in the playlist. animatzed and static. But static was previous pained elsewhere in the css.
