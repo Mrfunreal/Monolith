@@ -1,3 +1,53 @@
-THIS IS NOT FINISHED!
-I need a repo to test things in. Do not mind me.
+# Monolith
 
+A sleek and simple theme for Spicetify. 
+Most everything is dark, with some colorful highlights, the color of shich you can modify.
+
+![preview](./img/prev_Playlist.png)
+
+## Available colors
+
+- White
+- Default
+- Red
+- Red-Orange
+- Orange
+- Yellow-Orange
+- Yellow
+- Lime
+- Green
+- Turqoise
+- Bright-Blue
+- Blue
+- Purple
+- Magenta
+- Pink
+
+
+## Installation
+
+**Spicetify Marketplace** (recommended)
+
+Install the theme though the [Spicetify Marketplace](https://github.com/CharlieS1103/spicetify-marketplace). This will allow you to change the color quickly in-app.
+
+![colors](./img/colors.png)
+
+**Linux and MacOS** in Bash:
+
+```bash
+cd "$(dirname "$(spicetify -c)")/Themes"
+git clone https://github.com/Mrfunreal/Monolith
+```
+
+**Windows** in Powershell:
+
+```powershell
+cd "$(spicetify -c | Split-Path)\Themes"
+git clone https://github.com/Mrfunreal/Monolith
+```
+
+Changing schemes manually:
+```Powershell
+spicetify config current_theme Monolith
+spicetify config color_scheme red-orange
+spicetify apply```
