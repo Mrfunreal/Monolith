@@ -296,26 +296,43 @@ display:none !important;
 pointer-events: none !important;
 }
 
-/*adds new one*/
-/* Match only .main-trackList-active inside a parent with aria-selected="false", and no .main-trackList-selected */
+/*Adds Bright playing equalizer*/
 .main-trackList-active::before {
-  content: ''; 
-  position: absolute;
-	left:5px;
-	top: 12px;
+  content: '' !important;
+  position: absolute !important;
+	left:5px !important;
+	top: 12px !important;
   height: 30px !important;
   width: 30px !important;
-  background-size: 34px 34px !important; 
+  background-size: cover  !important; 
   background-image: url('https://raw.githubusercontent.com/Mrfunreal/Monolith/main/img/Equalizer%20Hollow.gif') !important;
   background-color: var(--spice-color) !important;
   pointer-events: none !important;
-  z-index: -1;
+  z-index: -1 !important;
 }
-/*Hides Play/Pause on actively playing song.*/
-.main-trackList-active .main-trackList-rowImagePlayButton {
+/*Adds Bright paused equalizer*/
+.main-trackList-active::after {
+  content: '' !important;
+  position: absolute !important;
+	left:5px !important;
+	top: 12px !important;
+  height: 30px !important;
+  width: 30px !important;
+  background-size: cover  !important; 
+  background-image: url('https://raw.githubusercontent.com/Mrfunreal/Monolith/main/img/Equalizer%20Hollow.gif') !important;
+  background-color: var(--spice-inactive) !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+}
+/* When .main-trackList-number is NOT present, hide the paused GIF */
+.main-trackList-active:not(:has(.main-trackList-number))::after {
   opacity: 0 !important;
 }
-
+/*Hides Play/Pause on actively playing song.*/
+.main-trackList-active .main-trackList-rowImagePlayButton,
+.main-trackList-active .main-trackList-number {
+  opacity: 0 !important;
+}
 
 /*------------------------------------ Accented leftovers ------------------------------------
 The things below here are from the theme "Accented" that i used as a base, but that don't seem to have any effect anymroe. 
