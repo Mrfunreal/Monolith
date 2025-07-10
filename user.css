@@ -9,11 +9,11 @@
 .hW9km7ku6_iggdWDR_Lg {
   --spice-sidebar: #000000 !important;						/* Outside Background around everything, behind progress bar*/
   --spice-main: #101010 !important;							/* inside background, behind library and track list*/
-  --spice-card: var(--spice-elevated) !important;				/* popup text boxes*/
+  --spice-card: var(--spice-inactive) !important;				/* popup text boxes*/
   --spice-subtext: #c4c4c4 !important;						/* Artist name, lots of icons, lots of less important text*/
   --background-highlight: var(--spice-color) !important;		/* highlight in library*/
-  --spice-highlight-elevated: var(--spice-elevated) !important;	/*Highlighted search bar, marketplace button, ect*/
-/*  --spice-main-elevated: var(--spice-elevated) !important;	/* bg of interactive things. (hovered over texts, search box, ect*/
+  --spice-highlight-elevated: var(--spice-inactive) !important;	/*Highlighted search bar, marketplace button, ect*/
+/*  --spice-main-elevated: var(--spice-inactive) !important;	/* bg of interactive things. (hovered over texts, search box, ect*/
 
   --is-active-fg-color: var(--spice-color) !important;      	/* Not sure tbh*/
   --spice-button-active: var(--spice-color) !important;			/*Active items (Playist name, shuffle button, checkmarks, ect)*/
@@ -89,14 +89,14 @@
 
 /*currently selected album/playlist/audiobook*/
 .BRX6aJUAuAsvHKD_fpbo:hover:after { 
-  background-color: var(--spice-elevated) !important; 
+  background-color: var(--spice-inactive) !important; 
   left: -5px;
   width: 101%
 }
 
 /*NOT selected album/playlist/audiobook*/
 .e-9960-box--naked.e-9960-box--interactive:hover:after { 
-  background-color: var(--spice-elevated) !important; 
+  background-color: var(--spice-inactive) !important; 
   left: -5px;
   width: 101%
 }
@@ -271,10 +271,6 @@ Butt Fuck it, it works. I don't dare to question it. it took long enough to figu
 /*ON HOME PAGE*/
 .view-homeShortcutsGrid-equaliser {
  /*  filter: brightness(100%) invert(1) saturate(500%);*/
-filter: hue-rotate(var(--spice-hue-rot))
-        saturate(var(--spice-Sat))
-        brightness(var(--spice-Brightness));
-
 	height: 34px;
 	width: 34px;
  /* position: relative;  */
@@ -285,9 +281,7 @@ filter: hue-rotate(var(--spice-hue-rot))
 
 .main-trackList-trackListRow.main-trackList-active .main-trackList-playingIcon {
   /* filter: brightness(100%) invert(1) saturate(500%);*/
-   filter:	hue-rotate(calc(var(--spice-hue-rot) * 1deg)) 
-			saturate(calc(var(--spice-sat) * 1%)) 
-			brightness(calc(var(--spice-brightness) * 1%));
+
    height: 30px;
    width: 30px;
    left: -10px;
@@ -342,8 +336,8 @@ button[aria-label="Playing"],
 /* Hearts are long gone.*/
 .__heart, .control-button-heart,
 .main-addButton-active {
-  color: var(--spice-heart) !important;
-  fill: var(--spice-heart) !important;
+  color: var(--spice-color) !important;
+  fill: var(--spice-color) !important;
 }
 
 .control-button-heart:hover,
