@@ -269,25 +269,52 @@ Butt Fuck it, it works. I don't dare to question it. it took long enough to figu
 
 /* ------------------------------------ Equalizers  ------------------------------------*/
 /*ON HOME PAGE*/
+/*hides original*/
 .view-homeShortcutsGrid-equaliser {
- /*  filter: brightness(100%) invert(1) saturate(500%);*/
-	height: 34px;
-	width: 34px;
- /* position: relative;  */
- /* left: -239px;        */
- /* z-index: 9999;*/
+	height: 34px!important;
+	width: 34px!important;
+    display: none !important;
+	pointer-events: none!important;
 }
+/*ads new one*/
+.WbY2HhFk2SjQ3NEvvkgb::before 
+{ content: ''; 
+height: 34px !important;
+width: 34px !important;
+position: absolute !important; 
+background-size: 34px 34px !important; 
+background-image: url('https://raw.githubusercontent.com/Mrfunreal/Monolith/refs/heads/main/img/Equalizer%20Hollow.gif') !important;
+background-color: var(--spice-color) !important;
+pointer-events: none !important;
+ }
+
+
 /*IN PLAYLIST*/
-
-.main-trackList-trackListRow.main-trackList-active .main-trackList-playingIcon {
-  /* filter: brightness(100%) invert(1) saturate(500%);*/
-
-   height: 30px;
-   width: 30px;
-   left: -10px;
-   center: 1x;
+/*Hides original equalizer*/
+.main-trackList-playingIcon {
+display:none !important;
+pointer-events: none !important;
 }
 
+/*adds new one*/
+/* Match only .main-trackList-active inside a parent with aria-selected="false", and no .main-trackList-selected */
+.main-trackList-active::before {
+  content: ''; 
+  position: absolute;
+	left:5px;
+	top: 12px;
+  height: 30px !important;
+  width: 30px !important;
+  background-size: 34px 34px !important; 
+  background-image: url('https://raw.githubusercontent.com/Mrfunreal/Monolith/main/img/Equalizer%20Hollow.gif') !important;
+  background-color: var(--spice-color) !important;
+  pointer-events: none !important;
+  z-index: -1;
+}
+/*Hides Play/Pause on actively playing song.*/
+.main-trackList-active .main-trackList-rowImagePlayButton {
+  opacity: 0 !important;
+}
 
 
 /*------------------------------------ Accented leftovers ------------------------------------
