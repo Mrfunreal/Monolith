@@ -46,8 +46,10 @@ cd "$(spicetify -c | Split-Path)\Themes"
 git clone https://github.com/Mrfunreal/Monolith
 ```
 
-Changing schemes manually:
+**Changing schemes manually**
 ```Powershell
 spicetify config current_theme Monolith
-spicetify config color_scheme red-orange
-spicetify apply```
+spicetify config color_scheme XXXXXX
+spicetify apply
+```
+Replace XXXXXX with whichever color combination you would like. Eg. `spicetify config color_scheme Red-Orange`
