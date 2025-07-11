@@ -60,4 +60,3 @@ spicetify config color_scheme XXXXXX
 spicetify apply
 ```
 Replace XXXXXX with whichever color combination you would like. Eg. `spicetify config color_scheme Red-Orange`
->>>>>>> 7b1ea766d17ae71ae8e32565eb173534ce8e74a4
