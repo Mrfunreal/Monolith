@@ -1,3 +1,5 @@
+/* ------------------------------------ M-O-N-O-L-I-T-H ------------------------------------*/
+
 
 /* ------------------------------------ New Font ------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
@@ -10,49 +12,49 @@
 .hW9km7ku6_iggdWDR_Lg {
   --spice-sidebar: #000000 !important;						/* Outside Background around everything, behind progress bar*/
   --spice-main: #101010 !important;							/* inside background, behind library and track list*/
-  --spice-card: var(--spice-inactive) !important;				/* popup text boxes*/
+  --spice-card: var(--spice-color3) !important;				/* popup text boxes*/
   --spice-subtext: #c4c4c4 !important;						/* Artist name, lots of icons, lots of less important text*/
-  --background-highlight: var(--spice-color) !important;		/* highlight in library*/
-  --spice-highlight-elevated: var(--spice-inactive) !important;	/*Highlighted search bar, marketplace button, ect*/
-/*  --spice-main-elevated: var(--spice-inactive) !important;	/* bg of interactive things. (hovered over texts, search box, ect*/
+  --background-highlight: var(--spice-color1) !important;		/* highlight in library*/
+  --spice-highlight-elevated: var(--spice-color3) !important;	/*Highlighted search bar, marketplace button, ect*/
+/*  --spice-main-elevated: var(--spice-color3) !important;	/* bg of interactive things. (hovered over texts, search box, ect*/
 
-  --is-active-fg-color: var(--spice-color) !important;      	/* Not sure tbh*/
-  --spice-button-active: var(--spice-color) !important;			/*Active items (Playist name, shuffle button, checkmarks, ect)*/
-  --spice-button: var(--spice-color) !important;				/*Not sure, but it was green. That's inacceptable*/
+  --is-active-fg-color: var(--spice-color1) !important;      	/* Not sure tbh*/
+  --spice-button-active: var(--spice-color1) !important;			/*Active items (Playist name, shuffle button, checkmarks, ect)*/
+  --spice-button: var(--spice-color1) !important;				/*Not sure, but it was green. That's inacceptable*/
 
-  --background-base: var(--spice-interact) !important;			/* pause button base*/
-  --background-highlight: var(--spice-color) !important;		/* pause button hover*/
-  --background-press: var(--spice-interact) !important;			/* pause button click*/
+  --background-base: var(--spice-color2) !important;			/* pause button base*/
+  --background-highlight: var(--spice-color1) !important;		/* pause button hover*/
+  --background-press: var(--spice-color2) !important;			/* pause button click*/
 
 }
 /*Base color settings*/
 .encore-light-theme,.encore-light-theme .encore-base-set {
-	--text-bright-accent: var(--spice-interact) !important;   /*link texts, like "change" when adding songs to playlist*/                            	
+	--text-bright-accent: var(--spice-color2) !important;   /*link texts, like "change" when adding songs to playlist*/                            	
 }
 /*all the marketplace buttons*/
 .button-module__button___hf2qg_marketplace {
   color: black;
-  background-color: var(--spice-color)
+  background-color: var(--spice-color1)
 }
 /* ------------------------------------ Scrollbar settings ------------------------------------*/
 .os-scrollbar-track{
   width: 6px;
 }
 .os-scrollbar-handle {
-  background-color: var(--spice-interact) ;
+  background-color: var(--spice-color2) ;
 }
 
 
 /* ------------------------------------ selected options above library ------------------------------------*/
 .f5yairu2OwqKcOecHnkA {
-  --spice-text: var(--spice-color) ;
+  --spice-text: var(--spice-color1) ;
 }
 
 /* ------------------------------------ background of library items ------------------------------------*/
 /*lowers text and play icon a little to be better centered in box*/
 .HeaderArea, .jpzxju {
  align-items: flex-end;
-	padding-left: 6px;
+ padding-left: 6px;
 }
 .e-9960-icon .e-9960-baseline, .IZq_xBKdh88HLD4QY90X  {
   width:50px
@@ -60,14 +62,14 @@
 
 /*currently selected album/playlist/audiobook*/
 .BRX6aJUAuAsvHKD_fpbo:hover:after { 
-  background-color: var(--spice-inactive) ; 
+  background-color: var(--spice-color3) ; 
   left: -5px;
   width: 101%
 }
 
 /*NOT selected album/playlist/audiobook*/
 .e-9960-box--naked.e-9960-box--interactive:hover:after { 
-  background-color: var(--spice-inactive) ; 
+  background-color: var(--spice-color3) ; 
   left: -5px;
   width: 101%
 }
@@ -77,7 +79,7 @@
 
 .VznvlkEh9fhk1AKhhZwe
 {
-  --lyrics-color-active: var(--spice-color) !important;				/* currently playing lyrics */
+  --lyrics-color-active: var(--spice-color1) !important;				/* currently playing lyrics */
   --lyrics-color-inactive: #aaaaaa !important;					/* not yet playing lyrics */
   --lyrics-color-background: #121212 !important;					/* Background color of lyrics screen */
   --lyrics-color-passed: rgb(255 255 255 / 75%) !important;		/* No idea */
@@ -116,14 +118,14 @@
 /*bottom part of that follower with tracklist and such*/
 .main-trackList-trackListHeaderStuck.main-trackList-trackListHeader {
     background: #101010;
-    border-bottom: 0px solid var(--spice-color) ;
+    border-bottom: 0px solid var(--spice-color1) ;
     border-top: 1px solid #101010;
     -webkit-box-shadow: 0 -1px 0 0 var(--spice-player);
     box-shadow: 0 -1px 0 0 var(--spice-player)
 }
 /* static tracklist header, adding nice accented line below*/
 .main-trackList-trackListHeaderRow {
-    border-bottom: 1px solid var(--spice-color) ;
+    border-bottom: 1px solid var(--spice-color1) ;
     color: var(--text-subdued,var(--spice-subtext));
     height: 36px;
   right: 50
@@ -131,7 +133,7 @@
 /* ------------------------------------ TRACKLIST EDITS (thing housing all songs) ------------------------------------*/
 /*bigger play buttons*/
 .main-trackList-rowImagePlayButton {
-    color: var(--spice-color) ;
+    color: var(--spice-color1) ;
     left: -8px;
     top: -4px;
     height: 150%;
@@ -143,13 +145,13 @@
 }
 /*BG color and border on playing track*/
 .main-trackList-trackListRow.main-trackList-active {
-background-color: rgba(var(--spice-rgb-color), 0.1) ;
-border: 1px solid var(--spice-color) ;
+background-color: rgba(var(--spice-rgb-color1), 0.1) ;
+border: 1px solid var(--spice-color1) ;
 box-sizing: border-box;
 }
 /*BG of hovered over and selected tracks.*/
 .main-rootlist-wrapper {
-  --spice-rgb-selected-row: var(--spice-rgb-color); 
+  --spice-rgb-selected-row: var(--spice-rgb-color1); 
 }
 
 
@@ -166,7 +168,7 @@ box-sizing: border-box;
   display: block;
   width: 16px;
   height: 16px;
-  border: 2px solid var(--spice-color);
+  border: 2px solid var(--spice-color1);
   border-top-color: transparent;
   border-left-color: transparent;
   border-radius: 50%;
@@ -198,16 +200,16 @@ box-sizing: border-box;
   height: 72px;
   border: 2px;
   border-style: groove;
-  border-color: var(--spice-color) ;
+  border-color: var(--spice-color1) ;
 }
  .main-trackInfo-name .main-trackInfo-overlay .cpltqpeZsQmmXy7qZgb9 .main-trackInfo-contentWrapper  .encore-text-body-small {
   font-size: 20px;
-  --spice-text: var(--spice-color) ;
+  --spice-text: var(--spice-color1) ;
 }
 
  .main-trackInfo-artists {
   font-size: 16px;
-  --spice-text: var(--spice-color) ;
+  --spice-text: var(--spice-color1) ;
 }
 /* ------------------------------------ Progress bar  ------------------------------------*/
 .main-nowPlayingBar-center {
@@ -215,7 +217,7 @@ box-sizing: border-box;
     width: 150%
 }
 .x-progressBar-fillColor {
-    background-color: var(--spice-color) ;			/* progress bar FG*/
+    background-color: var(--spice-color1) ;			/* progress bar FG*/
 }
 .x-progressBar-sliderArea {
     background-color: #4d4d4d ;						/* progress bar BG*/
@@ -274,7 +276,7 @@ height: 30px ;
 width: 30px ;
 background-size: cover  ; 
 background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><defs><mask id='bars-mask'><rect width='30' height='30' fill='white'/><rect x='2' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='5;20;10;15;10' dur='0.8s' repeatCount='indefinite'/><animate attributeName='y' values='15;5;10;7;10' dur='0.8s' repeatCount='indefinite'/></rect><rect x='9' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='10;15;5;20;10' dur='0.9s' repeatCount='indefinite'/><animate attributeName='y' values='10;7;15;5;10' dur='0.9s' repeatCount='indefinite'/></rect><rect x='16' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='15;5;20;10;15' dur='0.7s' repeatCount='indefinite'/><animate attributeName='y' values='7;15;5;10;7' dur='0.7s' repeatCount='indefinite'/></rect><rect x='23' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='10;20;15;5;10' dur='0.85s' repeatCount='indefinite'/><animate attributeName='y' values='10;5;7;15;10' dur='0.85s' repeatCount='indefinite'/></rect></mask></defs><rect width='30' height='30' fill='%23101010' mask='url(%23bars-mask)'/></svg>");
-background-color: var(--spice-color) ;
+background-color: var(--spice-color1) ;
 pointer-events: none ;
 z-index: -1 ;
 }
@@ -288,7 +290,7 @@ height: 30px ;
 width: 30px ;
 background-size: cover  ; 
 background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><defs><mask id='dots'><rect width='30' height='30' fill='white'/><circle cx='5' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0s'/></circle><circle cx='12' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0.15s'/></circle><circle cx='19' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0.3s'/></circle><circle cx='26' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0.45s'/></circle></mask></defs><rect width='30' height='30' fill='%23101010' mask='url(%23dots)'/></svg>");
-background-color: var(--spice-color) ;
+background-color: var(--spice-color1) ;
 pointer-events: none ;
 z-index: -1 ;
 }
@@ -314,9 +316,9 @@ I'm keeping them here becuase maybe i'm just stupid and didn't see the changes. 
 .main-button-primary,
 .control-button--active-dot:after,
 input:checked~.x-toggle-indicatorWrapper {
-  background-color: var(--spice-color) ;
-  background: var(--spice-color) ;
-  color: var(--spice-contrast) ;
+  background-color: var(--spice-color1) ;
+  background: var(--spice-color1) ;
+  color: #ffffff ;
 }
 
 
@@ -337,19 +339,19 @@ input:checked~.x-toggle-indicatorWrapper {
 .main-shuffleButton-button[aria-checked="true"],
 button[aria-label="Playing"],
 .control-button--active-dot:after {
-  color: var(--spice-color) ;
-  fill: var(--spice-color) ;
+  color: var(--spice-color1) ;
+  fill: var(--spice-color1) ;
 }
 
 .__color_contrast, .main-connectBar-connectBar.encore-bright-accent-set.mVVxN9ZfIRjiQfDuzPCZ.main-type-mesto {
-  color: var(--spice-contrast) ;
-  fill: var(--spice-contrast) ;
+  color: #ffffff ;
+  fill: #ffffff ;
 }
 /* Hearts are long gone.*/
 .__heart, .control-button-heart,
 .main-addButton-active {
-  color: var(--spice-color) ;
-  fill: var(--spice-color) ;
+  color: var(--spice-color1) ;
+  fill: var(--spice-color1) ;
 }
 
 .control-button-heart:hover,
@@ -373,7 +375,7 @@ button[aria-label="Playing"],
   border-radius: 50% ;
 }
 .HbKLiGoYM4dpuK8L4TMX._APVWqivXc4YqgsnpFkP {
-  background-color: var(--spice-contrast) ;
+  background-color: #ffffff ;
 }
 
 .HbKLiGoYM4dpuK8L4TMX svg {
@@ -383,7 +385,7 @@ button[aria-label="Playing"],
 
 .main-trackList-trackListRow.main-trackList-active .main-trackList-rowTitle,
 .main-trackList-trackListRow.main-trackList-active .main-trackList-rowMarker {
-  color: var(--spice-color) ;
+  color: var(--spice-color1) ;
 }
 
 #spicetify-group-session-menu > img {
@@ -395,7 +397,7 @@ button[aria-label="Playing"],
 }
 
 .e-9640-button-primary:hover .e-9640-button-primary__inner {
-  background-color: var(--spice-color) ;
+  background-color: var(--spice-color1) ;
   filter: brightness(1.2) ;
 }
 

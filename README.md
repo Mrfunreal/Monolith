@@ -7,21 +7,7 @@ Most everything is dark, with some colorful highlights, the color of shich you c
 
 ## Available colors
 ![colors](./img/colors.png)
-- White
-- Default
-- Red
-- Red-Orange
-- Orange
-- Yellow-Orange
-- Yellow
-- Lime
-- Green
-- Turqoise
-- Bright-Blue
-- Blue
-- Purple
-- Magenta
-- Pink
+
 
 
 ## Installation
