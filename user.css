@@ -146,7 +146,6 @@
 background-color: rgba(var(--spice-rgb-color), 0.1) ;
 border: 1px solid var(--spice-color) ;
 box-sizing: border-box;
-border-style: dotted;
 }
 /*BG of hovered over and selected tracks.*/
 .main-rootlist-wrapper {

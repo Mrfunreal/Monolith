@@ -50,4 +50,5 @@ Changing schemes manually:
 ```Powershell
 spicetify config current_theme Monolith
 spicetify config color_scheme red-orange
-spicetify apply```
+spicetify apply
+```
