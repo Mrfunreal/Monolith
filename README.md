@@ -26,10 +26,9 @@ Most everything is dark, with some colorful highlights, the color of shich you c
 
 ## Installation
 
-**Spicetify Marketplace** (recommended)
+**Spicetify Marketplace**
 
-Install the theme though the [Spicetify Marketplace](https://github.com/CharlieS1103/spicetify-marketplace). This will allow you to change the color quickly in-app.
-
+[Spicetify Marketplace](https://github.com/CharlieS1103/spicetify-marketplace) allows you to change the color scheme in-app without rebooting.
 ![colors](./img/colors.png)
 
 **Linux and MacOS** in Bash:
@@ -46,7 +45,7 @@ cd "$(spicetify -c | Split-Path)\Themes"
 git clone https://github.com/Mrfunreal/Monolith
 ```
 
-Changing schemes manually:
+**Changing schemes**
 ```Powershell
 spicetify config current_theme Monolith
 spicetify config color_scheme red-orange
