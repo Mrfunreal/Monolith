@@ -6,6 +6,8 @@
 * {
   font-family: 'Noto Sans', sans-serif !important;
 }
+
+
 /* ------------------------------------ Base color changes ------------------------------------*/
 :root,
 .encore-dark-theme .encore-bright-accent-set,
@@ -36,47 +38,78 @@
   color: black;
   background-color: var(--spice-color1)
 }
+/*Removes shortcuts on home screen. 
+They rearrange all the time anyways.
+"Recently played" is way more useful in doing the same task*/
+.view-homeShortcutsGrid-shortcuts {
+	display: none;
+}
 /* ------------------------------------ Scrollbar settings ------------------------------------*/
-.os-scrollbar-track{
-  width: 6px;
+.os-scrollbar-track { width: 6px;}
+.os-scrollbar-handle { background-color: var(--spice-color2) ;}
+/* ------------------------------------ Filter buttons ------------------------------------*/
+.ChipInnerComponent-sm-selected-secondary,
+.ChipInnerComponent-sm-selected {
+	--spice-text: var(--spice-color1) !important;
+	--background-base: var(--spice-text) !important;
+    --background-highlight: var(--spice-color2) !important;
+    --background-press: var(--spice-color3) !important;
+	--decorative-subdued: var(--spice-color2) !important;
 }
-.os-scrollbar-handle {
-  background-color: var(--spice-color2) ;
-}
-
-
-/* ------------------------------------ selected options above library ------------------------------------*/
-.f5yairu2OwqKcOecHnkA {
-  --spice-text: var(--spice-color1) ;
-}
-
 /* ------------------------------------ background of library items ------------------------------------*/
 /*lowers text and play icon a little to be better centered in box*/
 .HeaderArea, .jpzxju {
  align-items: flex-end;
  padding-left: 6px;
 }
+/*padds playing icon a little more to the left.*/
 .e-9960-icon .e-9960-baseline, .IZq_xBKdh88HLD4QY90X  {
   width:50px
 }
 
-/*currently selected album/playlist/audiobook*/
-.BRX6aJUAuAsvHKD_fpbo:hover:after { 
+/*hoverable buttons. Libary background, mainmenu showcases.*/
+.e-9960-box--interactive:hover:after,
+.e-9960-box--interactive:hover,
+.view-homeShortcutsGrid-shortcut:hover { 
   background-color: var(--spice-color3) ; 
-  left: -5px;
-  width: 101%
+  transition: none !important;
+  transform: none !important;
+  scale: none !important;
 }
 
-/*NOT selected album/playlist/audiobook*/
-.e-9960-box--naked.e-9960-box--interactive:hover:after { 
-  background-color: var(--spice-color3) ; 
-  left: -5px;
-  width: 101%
+/* Playlist you're currently *viewing* EXCEPT if it's the one currently *playing* */
+.main-yourLibraryX-listItem:not([aria-selected="true"]) .e-9960-box--tinted::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(270deg,
+    rgba(var(--spice-rgb-color1), .2),
+    rgba(var(--spice-rgb-color1), 0));
+  border-right: 2px solid var(--spice-color1);
+  pointer-events: none;
+  z-index: 1;
+}
+/*Playlist that's actively playing music*/
+.main-yourLibraryX-listItem[aria-selected="true"]::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: 100%;
+  background: linear-gradient( 270deg,
+    rgba(var(--spice-rgb-color1), .2),
+    rgba(var(--spice-rgb-color1), 0));
+  border-right: 2px solid var(--spice-color1) ;
+  pointer-events: none;
+}
+/*all library boxes be right angled*/
+.main-yourLibraryX-listItem,
+.e-9960-box:not(.main-card-cardContainer),
+.RowButton-sc-xxkq4e-0,
+.Box-group-listRow-isInteractive-minBlockSize_32px-padding_4px_8px {
+  border-radius: 0 !important;
 }
 
 /* ------------------------------------ Lyrics Screen ------------------------------------*/
-
-
 .VznvlkEh9fhk1AKhhZwe
 {
   --lyrics-color-active: var(--spice-color1) !important;				/* currently playing lyrics */
@@ -85,10 +118,6 @@
   --lyrics-color-passed: rgb(255 255 255 / 75%) !important;		/* No idea */
   --lyrics-color-messaging: rgb(255 255 255 / 75%) !important;	/* No idea */
   }
-
-
-
-
 /*  ------------------------------------ Playlist/Audiobook header ------------------------------------*/
 /*top header less height*/
 .main-entityHeader-container.JYKKZFIXuf9lIHVeszuS {
@@ -145,10 +174,18 @@
 }
 /*BG color and border on playing track*/
 .main-trackList-trackListRow.main-trackList-active {
-background-color: rgba(var(--spice-rgb-color1), 0.1) ;
-border: 1px solid var(--spice-color1) ;
+background-color: rgba(var(--spice-rgb-color1), 0.1);
+border: 1px solid var(--spice-color1);
 box-sizing: border-box;
 }
+
+.main-trackList-trackListRow.main-trackList-active .UudGCx16EmBkuFPllvss ,
+.main-trackList-trackListRow.main-trackList-active .main-trackList-rowTitle {
+	font-size-adjust: .6;
+}
+
+
+
 /*BG of hovered over and selected tracks.*/
 .main-rootlist-wrapper {
   --spice-rgb-selected-row: var(--spice-rgb-color1); 
@@ -185,8 +222,12 @@ box-sizing: border-box;
     transform: rotate(360deg);
   }
 }
-
-
+/*Don't add the spinner to select extensions*/
+[aria-label="Phrase2Playlist"]::after {
+  content: none !important;
+  display: none !important;
+  animation: none !important;
+}
 
 /* -------------------------------------------------- Playbar Section  --------------------------------------------------*/
 
