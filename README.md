@@ -6,7 +6,7 @@ Most everything is dark, with some colorful highlights, the color of shich you c
 ![preview](./img/prev_Playlist.png)
 
 ## Available colors
-![colors](./img/colors.png)
+![colors](./img/Colors.png)
 
 
 
