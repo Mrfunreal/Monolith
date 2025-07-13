@@ -15,7 +15,7 @@
   --spice-sidebar: #000000 !important;						/* Outside Background around everything, behind progress bar*/
   --spice-main: #101010 !important;							/* inside background, behind library and track list*/
   --spice-card: var(--spice-color3) !important;				/* popup text boxes*/
-  --spice-subtext: #c4c4c4 !important;						/* Artist name, lots of icons, lots of less important text*/
+  --spice-subtext: #cdcdcd !important;						/* Artist name, lots of icons, lots of less important text*/
   --background-highlight: var(--spice-color1) !important;		/* highlight in library*/
   --spice-highlight-elevated: var(--spice-color3) !important;	/*Highlighted search bar, marketplace button, ect*/
 /*  --spice-main-elevated: var(--spice-color3) !important;	/* bg of interactive things. (hovered over texts, search box, ect*/
@@ -38,14 +38,29 @@
   color: black;
   background-color: var(--spice-color1)
 }
-/*Removes shortcuts on home screen. 
-They rearrange all the time anyways.
-"Recently played" is way more useful in doing the same task*/
-.view-homeShortcutsGrid-shortcuts {
-	display: none;
-}
+/* ------------------------------------ Trash managment ------------------------------------*/
+.view-homeShortcutsGrid-shortcuts	{	display: none; }	/*no shortcuts on home screen. "Jump back in" and "Recently played" do the same and have no laggy gif	*/
+.main-actionBar-exploreButton		{	display: none; }	/*no playlist summary/preview																			*/
+.SsbbQFeJun2Ts_EIktpr				{	display: none; }	/*no laggy video reccomendation on bottom of homepage													*/
+
+/* "Now playing" sidebar only shows album image and song name and "About artist" No more queue, merch, tour, credis*/
+.main-nowPlayingView-section.main-nowPlayingView-queue,
+.main-nowPlayingView-section.main-nowPlayingView-merch, 
+.main-nowPlayingView-section.main-nowPlayingView-artistOnTour,
+.main-nowPlayingView-section.main-nowPlayingView-credits
+{	display: none; }	
+
+/*no "popular" reccomendations*/
+[data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href='/section/0JQ5DAuChZYPe9iDhh2mJz']) { display: none !important; } 
+/*Makes "Jump back in" and "Recently played" appear side by side. Because they're sorta useful*/
+[data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href="/section/0JQ5DAIiKWzVFULQfUm85X"]),
+[data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href="/genre/recently-played"]) { min-width:33%;  max-width: 41.5%; padding-left: 2.5%; }
+
+
+
+
 /* ------------------------------------ Scrollbar settings ------------------------------------*/
-.os-scrollbar-track { width: 6px;}
+.os-scrollbar-track { width: 10px; left:6px;}
 .os-scrollbar-handle { background-color: var(--spice-color2) ;}
 /* ------------------------------------ Filter buttons ------------------------------------*/
 .ChipInnerComponent-sm-selected-secondary,
@@ -56,17 +71,41 @@ They rearrange all the time anyways.
     --background-press: var(--spice-color3) !important;
 	--decorative-subdued: var(--spice-color2) !important;
 }
-/* ------------------------------------ background of library items ------------------------------------*/
+/* ------------------------------------ Library sidebar ------------------------------------*/
 /*lowers text and play icon a little to be better centered in box*/
-.HeaderArea, .jpzxju {
- align-items: flex-end;
- padding-left: 6px;
-}
+.HeaderArea, .jpzxju { align-items: flex-end; padding-left: 6px; }
 /*padds playing icon a little more to the left.*/
-.e-9960-icon .e-9960-baseline, .IZq_xBKdh88HLD4QY90X  {
-  width:50px
+.IZq_xBKdh88HLD4QY90X  { margin-right: 20px }
+
+/*titles less wide to accomodate new icons*/
+.main-yourLibraryX-listItem[aria-selected="true"] .Areas__InteractiveArea-sc-8gfrea-0.Areas__Column-sc-8gfrea-5.bJSfgC.Column-sm {max-width: 85%;}
+
+/* Hide original speaker icon */
+.PUipCs3_0Qott0Sru3pB:not(.Button-buttonTertiary-small-iconOnly-useBrowserDefaultFocusStyle-condensedAll) svg {
+  display: none !important;
 }
 
+/* ♬ icon: only on currently playing playlist */
+.main-yourLibraryX-listItem[aria-selected="true"]::before {
+  content: '♬';
+  position: absolute;
+  top: 4px;
+  right: 25px;
+  z-index: 2;
+  pointer-events: none;
+  color: var(--spice-color1);
+}
+
+/* 👁 icon: always on the viewed playlist */
+.main-yourLibraryX-listItem .e-9960-box--tinted::before {
+  content: '👁';
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  z-index: 2;
+  pointer-events: none;
+  color: var(--spice-color1);
+}
 /*hoverable buttons. Libary background, mainmenu showcases.*/
 .e-9960-box--interactive:hover:after,
 .e-9960-box--interactive:hover,
@@ -77,101 +116,105 @@ They rearrange all the time anyways.
   scale: none !important;
 }
 
+
 /* Playlist you're currently *viewing* EXCEPT if it's the one currently *playing* */
 .main-yourLibraryX-listItem:not([aria-selected="true"]) .e-9960-box--tinted::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(270deg,
-    rgba(var(--spice-rgb-color1), .2),
-    rgba(var(--spice-rgb-color1), 0));
-  border-right: 2px solid var(--spice-color1);
-  pointer-events: none;
-  z-index: 1;
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(270deg,
+	rgba(var(--spice-rgb-color1), .2),
+	rgba(var(--spice-rgb-color1), 0));
+	border-right: 2px solid var(--spice-color1);
+	pointer-events: none;
+	z-index: 1;
+
 }
 /*Playlist that's actively playing music*/
 .main-yourLibraryX-listItem[aria-selected="true"]::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-size: 100%;
-  background: linear-gradient( 270deg,
-    rgba(var(--spice-rgb-color1), .2),
-    rgba(var(--spice-rgb-color1), 0));
-  border-right: 2px solid var(--spice-color1) ;
-  pointer-events: none;
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-size: 100%;
+	background: linear-gradient( 270deg,
+	rgba(var(--spice-rgb-color1), .2),
+	rgba(var(--spice-rgb-color1), 0));
+	border-right: 2px solid var(--spice-color1) ;
+	pointer-events: none;
 }
-/*all library boxes be right angled*/
+/*all library boxes be right 90° angled*/
 .main-yourLibraryX-listItem,
 .e-9960-box:not(.main-card-cardContainer),
 .RowButton-sc-xxkq4e-0,
 .Box-group-listRow-isInteractive-minBlockSize_32px-padding_4px_8px {
   border-radius: 0 !important;
 }
+/*Album/Playlist/Artist text on unfiltered library sidebar*/
+.ListRowDetails__LineClamp-sc-sozu4l-1.LineClamp-1 {  font-style: italic; font-weight: 100; }
+
+
+
 
 /* ------------------------------------ Lyrics Screen ------------------------------------*/
 .VznvlkEh9fhk1AKhhZwe
 {
-  --lyrics-color-active: var(--spice-color1) !important;				/* currently playing lyrics */
-  --lyrics-color-inactive: #aaaaaa !important;					/* not yet playing lyrics */
-  --lyrics-color-background: #121212 !important;					/* Background color of lyrics screen */
-  --lyrics-color-passed: rgb(255 255 255 / 75%) !important;		/* No idea */
-  --lyrics-color-messaging: rgb(255 255 255 / 75%) !important;	/* No idea */
-  }
+	--lyrics-color-active: var(--spice-color1) !important; 			/* currently playing lyrics */
+	--lyrics-color-inactive: #aaaaaa !important;					/* not yet playing lyrics */
+	--lyrics-color-background: #121212 !important;					/* Background color of lyrics screen */
+	--lyrics-color-passed: rgb(255 255 255 / 75%) !important;		/* No idea */
+	--lyrics-color-messaging: rgb(255 255 255 / 75%) !important;	/* No idea */
+	text-shadow: 5px 5px var(--spice-color3)
+}
 /*  ------------------------------------ Playlist/Audiobook header ------------------------------------*/
+.blfR_YJUsKUvdgTejBSb .w1TBi3o5CTM7zW1EB3Bm { color: #cdcdcd ;}	/* Playlist header subtext color (saves, track count)	*/
+.main-entityHeader-creatorButton { color: var(--spice-color1) ;}	/* Playlist header Creator color						*/
+.playlist-playlist-playlistDescription { color: white ;}			/* Playlist header description color					*/
+.main-image-loaded.main-entityHeader-image  { border: 2px; border-style: groove; border-color: var(--spice-color1) ; } /*album art border*/
+.e-9960-text.encore-text-headline-large.encore-internal-color-text-base {  text-shadow: 5px 5px var(--spice-color2); } /*playlist name shadow/ artist page artist name shadow as well.*/
 /*top header less height*/
-.main-entityHeader-container.JYKKZFIXuf9lIHVeszuS {
-    max-height: 260px;
-    min-height: 200px
-}
+.main-entityHeader-container.JYKKZFIXuf9lIHVeszuS {max-height: 260px;min-height: 200px}
 /*buttons below header, less height!*/
-.main-actionBar-ActionBar {
-    padding-bottom: 0px;
-    padding-top: 0px;
-}
+.main-actionBar-ActionBar { padding-bottom: 0px; padding-top: 0px; }
+
 .main-entityHeader-backgroundColor, .main-home-homeHeader, .main-actionBarBackground-background,   /*Playlist header*/
-.Bdcf5g__Rug3TGqSdbiy, .main-entityHeader-container, .JYKKZFIXuf9lIHVeszuS, .XVz4BMGP5zAEE5p90mYK, /*Audiobook header*/
+.Bdcf5g__Rug3TGqSdbiy,  .JYKKZFIXuf9lIHVeszuS, .XVz4BMGP5zAEE5p90mYK, /*Audiobook header*/
 .main-topBar-background, /*That little header that shows up on top of the screen with the playlist name when you scroll down.*/
 .playlist-playlist-playlistContent
 {
-  background-color: #101010 !important;
-  background: #101010 !important;
+	background-color: #101010 !important;
+	background: #101010 !important;
 }
 
 /*background color on "follower" header that appears when scrolling*/
-.main-topBar-overlay 
-{
-  background-color: #101010 ;
-  height: 100%
-}
+.main-topBar-overlay { background-color: #101010 ; height: 100% }
 /*bottom part of that follower with tracklist and such*/
 .main-trackList-trackListHeaderStuck.main-trackList-trackListHeader {
-    background: #101010;
-    border-bottom: 0px solid var(--spice-color1) ;
-    border-top: 1px solid #101010;
-    -webkit-box-shadow: 0 -1px 0 0 var(--spice-player);
-    box-shadow: 0 -1px 0 0 var(--spice-player)
+	background: #101010;
+	border-bottom: 1px solid var(--spice-color1) ;
+	border-top: 1px solid #101010;
+	-webkit-box-shadow: 0 -1px 0 0 var(--spice-player);
+	box-shadow: 0 -1px 0 0 var(--spice-player)
 }
 /* static tracklist header, adding nice accented line below*/
 .main-trackList-trackListHeaderRow {
-    border-bottom: 1px solid var(--spice-color1) ;
-    color: var(--text-subdued,var(--spice-subtext));
-    height: 36px;
-  right: 50
+	border-bottom: 1px solid var(--spice-color1) ;
+	color: var(--text-subdued,var(--spice-subtext));
+	height: 36px;
+	right: 50
 }
+
+
 /* ------------------------------------ TRACKLIST EDITS (thing housing all songs) ------------------------------------*/
 /*bigger play buttons*/
 .main-trackList-rowImagePlayButton {
-    color: var(--spice-color1) ;
-    left: -8px;
-    top: -4px;
-    height: 150%;
-    width: 150%;
+	color: var(--spice-color1) ;
+	left: -8px;
+	top: -4px;
+	height: 150%;
+	width: 150%;
 }
 /*Always show "add to playlist" button*/
-.main-trackList-curationButton[aria-checked=false] {
-    opacity: 1
-}
+.main-trackList-curationButton[aria-checked=false] { opacity: 1 }
 /*BG color and border on playing track*/
 .main-trackList-trackListRow.main-trackList-active {
 background-color: rgba(var(--spice-rgb-color1), 0.1);
@@ -180,16 +223,12 @@ box-sizing: border-box;
 }
 
 .main-trackList-trackListRow.main-trackList-active .UudGCx16EmBkuFPllvss ,
-.main-trackList-trackListRow.main-trackList-active .main-trackList-rowTitle {
-	font-size-adjust: .6;
-}
-
+.main-trackList-trackListRow.main-trackList-active .main-trackList-rowTitle 
+{ font-size-adjust: .6; }
 
 
 /*BG of hovered over and selected tracks.*/
-.main-rootlist-wrapper {
-  --spice-rgb-selected-row: var(--spice-rgb-color1); 
-}
+.main-rootlist-wrapper { --spice-rgb-selected-row: var(--spice-rgb-color1);  }
 
 
 /* Hide Lottie animations in both main-trackList-curationButton and icon-only tertiary buttons */
@@ -290,22 +329,12 @@ box-sizing: border-box;
 
 /* ------------------------------------ Equalizers  ------------------------------------*/
 /*ON HOME PAGE*/
-/*hides original*/
-.view-homeShortcutsGrid-equaliser {
-	height: 34px;
-	width: 34px;
-    display: none ;
-	pointer-events: none;
-}
-
-
+/*Would hide original, but shortcut are gone anyways*/
+/* .view-homeShortcutsGrid-equaliser { height: 34px; width: 34px; display: none ; pointer-events: none; }*/
 
 /*IN PLAYLIST*/
 /*Hides original equalizer*/
-.main-trackList-playingIcon {
-display:none ;
-pointer-events: none ;
-}
+.main-trackList-playingIcon { display:none ; pointer-events: none ; }
 
 /*Adds playing equalizer*/
 .main-trackList-active::before {
@@ -344,9 +373,7 @@ z-index: -1 ;
 .main-trackList-active .main-trackList-number {
   opacity: 0 !important;
 }
-/*------------------------------------ Removing the video section on homepage ------------------------------------*/
 
-.SsbbQFeJun2Ts_EIktpr {	display: none; }
 
 /*------------------------------------ Accented leftovers ------------------------------------
 The things below here are from the theme "Accented" that i used as a base, but that don't seem to have any effect anymroe. 
