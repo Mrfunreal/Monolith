@@ -2,13 +2,14 @@
 
 A sleek and simple theme for Spicetify.<br> 
 Most everything is dark, with some colorful highlights, the color of shich you can modify.
+<div class="grid" markdown>
+<img src="./img/prev_Playlist.png" width="auto" height="455"> <img src="./img/Colors.png" width="auto" height="455">
+</div>
 
-![preview](./img/prev_Playlist.png)
-
-## Available colors
-<p align="center">
-<img src="./img/Colors.png" width="300" height="auto" align="center">
-</p>
+# Preview images
+<details><summary>Expand me ♫</summary>
+<img src="./img/library.png" width="300" height="auto">
+</details>
 
 ## Notable features
 - Removes "Playlist Preview/Summary".
@@ -58,5 +59,4 @@ spicetify apply
 ```
 Replace XXXXXX with whichever color combination you would like. Eg. `spicetify config color_scheme Red-Orange`
 
-# Preview images.
-![preview](./img/Library.png)
+
