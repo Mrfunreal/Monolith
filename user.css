@@ -6,38 +6,39 @@
 * {
   font-family: 'Noto Sans', sans-serif !important;
 }
-
-
 /* ------------------------------------ Base color changes ------------------------------------*/
 :root,
 .encore-dark-theme .encore-bright-accent-set,
 .hW9km7ku6_iggdWDR_Lg {
   --spice-sidebar: #000000 !important;						/* Outside Background around everything, behind progress bar*/
   --spice-main: #101010 !important;							/* inside background, behind library and track list*/
-  --spice-card: var(--spice-color3) !important;				/* popup text boxes*/
+   --spice-card: var(--spice-color3) !important; 				/* popup text boxes*/
   --spice-subtext: #cdcdcd !important;						/* Artist name, lots of icons, lots of less important text*/
   --background-highlight: var(--spice-color1) !important;		/* highlight in library*/
-  --spice-highlight-elevated: var(--spice-color3) !important;	/*Highlighted search bar, marketplace button, ect*/
-/*  --spice-main-elevated: var(--spice-color3) !important;	/* bg of interactive things. (hovered over texts, search box, ect*/
-
+--spice-highlight-elevated: var(--spice-color3) !important;	/*Highlighted search bar, marketplace button, ect*/
+  /*  --spice-main-elevated: var(--spice-color3) !important;	/* bg of interactive things. (hovered over texts, search box, ect*/
   --is-active-fg-color: var(--spice-color1) !important;      	/* Not sure tbh*/
   --spice-button-active: var(--spice-color1) !important;			/*Active items (Playist name, shuffle button, checkmarks, ect)*/
   --spice-button: var(--spice-color1) !important;				/*Not sure, but it was green. That's inacceptable*/
-
   --background-base: var(--spice-color2) !important;			/* pause button base*/
   --background-highlight: var(--spice-color1) !important;		/* pause button hover*/
   --background-press: var(--spice-color2) !important;			/* pause button click*/
-
 }
 /*Base color settings*/
 .encore-light-theme,.encore-light-theme .encore-base-set {
 	--text-bright-accent: var(--spice-color2) !important;   /*link texts, like "change" when adding songs to playlist*/                            	
 }
+/*------------------------------------ Random stuff ------------------------------------*/
+ /*follow button*/
+.Button-sc-y0gtbx-0:hover { background-color: var(--spice-color3); border: 1px solid;}
 /*all the marketplace buttons*/
-.button-module__button___hf2qg_marketplace {
-  color: black;
-  background-color: var(--spice-color1)
-}
+.button-module__button___hf2qg_marketplace { color: black;  background-color: var(--spice-color1) }
+/*fix searchbar and playlist edit boxes*/
+.main-playlistEditDetailsModal-container,
+.GimJ6fo6WOYPyWNVpSr1.ZjfaJlGQZ42nCWjD3FDm,
+.hW9km7ku6_iggdWDR_Lg.main-topBar-searchBar 
+{ background-color: #242424; }
+
 /* ------------------------------------ Trash managment ------------------------------------*/
 .view-homeShortcutsGrid-shortcuts	{	display: none; }	/*no shortcuts on home screen. "Jump back in" and "Recently played" do the same and have no laggy gif	*/
 .main-actionBar-exploreButton		{	display: none; }	/*no playlist summary/preview																			*/
@@ -55,9 +56,6 @@
 /*Makes "Jump back in" and "Recently played" appear side by side. Because they're sorta useful*/
 [data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href="/section/0JQ5DAIiKWzVFULQfUm85X"]),
 [data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href="/genre/recently-played"]) { min-width:33%;  max-width: 41.5%; padding-left: 2.5%; }
-
-
-
 
 /* ------------------------------------ Scrollbar settings ------------------------------------*/
 .os-scrollbar-track { width: 10px; left:6px;}
@@ -85,9 +83,9 @@
   display: none !important;
 }
 
-/* ♬ icon: only on currently playing playlist */
+/* ♫ icon: only on currently playing playlist */
 .main-yourLibraryX-listItem[aria-selected="true"]::before {
-  content: '♬';
+  content: '♫';
   position: absolute;
   top: 4px;
   right: 25px;
@@ -96,7 +94,7 @@
   color: var(--spice-color1);
 }
 
-/* 👁 icon: always on the viewed playlist */
+/*  👁 icon: always on the viewed playlist */
 .main-yourLibraryX-listItem .e-9960-box--tinted::before {
   content: '👁';
   position: absolute;
@@ -142,7 +140,7 @@
 	border-right: 2px solid var(--spice-color1) ;
 	pointer-events: none;
 }
-/*all library boxes be right 90° angled*/
+/*all library boxes be right 90Â° angled*/
 .main-yourLibraryX-listItem,
 .e-9960-box:not(.main-card-cardContainer),
 .RowButton-sc-xxkq4e-0,
@@ -151,8 +149,6 @@
 }
 /*Album/Playlist/Artist text on unfiltered library sidebar*/
 .ListRowDetails__LineClamp-sc-sozu4l-1.LineClamp-1 {  font-style: italic; font-weight: 100; }
-
-
 
 
 /* ------------------------------------ Lyrics Screen ------------------------------------*/
@@ -169,13 +165,15 @@
 .blfR_YJUsKUvdgTejBSb .w1TBi3o5CTM7zW1EB3Bm { color: #cdcdcd ;}	/* Playlist header subtext color (saves, track count)	*/
 .main-entityHeader-creatorButton { color: var(--spice-color1) ;}	/* Playlist header Creator color						*/
 .playlist-playlist-playlistDescription { color: white ;}			/* Playlist header description color					*/
-.main-image-loaded.main-entityHeader-image  { border: 2px; border-style: groove; border-color: var(--spice-color1) ; } /*album art border*/
-.e-9960-text.encore-text-headline-large.encore-internal-color-text-base {  text-shadow: 5px 5px var(--spice-color2); } /*playlist name shadow/ artist page artist name shadow as well.*/
+/*.main-image-loaded.main-entityHeader-image  { border: 2px; border-style: groove; border-color: var(--spice-color1) ; } /*album art border*/
+/*.e-9960-text.encore-text-headline-large.encore-internal-color-text-base {  text-shadow: 5px 5px var(--spice-color2); } /*playlist name shadow/ artist page artist name shadow as well.*/
+
 /*top header less height*/
 .main-entityHeader-container.JYKKZFIXuf9lIHVeszuS {max-height: 260px;min-height: 200px}
 /*buttons below header, less height!*/
-.main-actionBar-ActionBar { padding-bottom: 0px; padding-top: 0px; }
+.main-actionBar-ActionBar {padding-bottom: 1px;padding-top: 1px;}
 
+/*header changes*/
 .main-entityHeader-backgroundColor, .main-home-homeHeader, .main-actionBarBackground-background,   /*Playlist header*/
 .Bdcf5g__Rug3TGqSdbiy,  .JYKKZFIXuf9lIHVeszuS, .XVz4BMGP5zAEE5p90mYK, /*Audiobook header*/
 .main-topBar-background, /*That little header that shows up on top of the screen with the playlist name when you scroll down.*/
@@ -203,8 +201,51 @@
 	right: 50
 }
 
+/*header separator color*/
+.main-trackList-trackListHeader:hover .I7SbihsVaE4CAUqLMa45,.main-trackList-trackList.x15L1JFSJDsSz7tzE69K .I7SbihsVaE4CAUqLMa45 {
+    background: linear-gradient(rgba(var(--spice-rgb-color1),1),rgba(var(--spice-rgb-color1),1)) no-repeat 50%/1px 100%
+}
 
-/* ------------------------------------ TRACKLIST EDITS (thing housing all songs) ------------------------------------*/
+/*liked playlist image*/
+/* Step 1: Target the image and hide it */
+img[src*="liked-songs-300.jpg"] {
+  opacity: 0 !important;
+  position: absolute;
+  z-index: -1;
+}
+
+/* Step 2: Target the container and insert custom overlay */
+img[src="https://misc.scdn.co/liked-songs/liked-songs-300.jpg"].main-entityHeader-image,
+.main-entityHeader-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4em;
+  color: white;
+}
+
+/* Step 3: Add the heart using ::after */
+.main-entityHeader-image:has(img[src*="liked-songs-300.jpg"]) {
+  background: linear-gradient(135deg, rgba(var(--spice-rgb-color1), .3), rgba(var(--spice-rgb-color1), 1)) !important;
+  position: relative;
+}
+
+/* Overlay the heart on top */
+.main-entityHeader-image:has(img[src*="liked-songs-300.jpg"])::after {
+   content: "❤";
+  position: absolute;
+  font-size: 2em;
+  color: white;
+  z-index: 2;
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* ------------------------------------ TRACKLIST EDITS ------------------------------------*/
 /*bigger play buttons*/
 .main-trackList-rowImagePlayButton {
 	color: var(--spice-color1) ;
@@ -217,18 +258,26 @@
 .main-trackList-curationButton[aria-checked=false] { opacity: 1 }
 /*BG color and border on playing track*/
 .main-trackList-trackListRow.main-trackList-active {
-background-color: rgba(var(--spice-rgb-color1), 0.1);
-border: 1px solid var(--spice-color1);
+background-color: rgba(var(--spice-rgb-color1), 0.05);
+border: 1px solid var(--spice-color2);
 box-sizing: border-box;
 }
-
+ /*for of actively playing song*/
 .main-trackList-trackListRow.main-trackList-active .UudGCx16EmBkuFPllvss ,
 .main-trackList-trackListRow.main-trackList-active .main-trackList-rowTitle 
-{ font-size-adjust: .6; }
+{ font-size-adjust: .6; 
+}
 
 
 /*BG of hovered over and selected tracks.*/
-.main-rootlist-wrapper { --spice-rgb-selected-row: var(--spice-rgb-color1);  }
+.Xo8dgIGCCWjHXWBoKhaV .main-rootlist-wrapper { --spice-rgb-selected-row: var(--spice-rgb-color1) }
+/*adjusted width for playlists with 1000+ songs*/
+.main-trackList-rowSectionIndex {width: 20%;}
+
+/*unavailable songs*/
+.tH1iuxCV8NexP4pzEBa4, .tH1iuxCV8NexP4pzEBa4 *,  .tH1iuxCV8NexP4pzEBa4 .encore-text-body-small * { color: #f00;  }
+.tH1iuxCV8NexP4pzEBa4, .tH1iuxCV8NexP4pzEBa4 .l67ZKWaTyRadDGEcLWcE { background-color:#ff000009; border: 1px solid #f004; }
+.tH1iuxCV8NexP4pzEBa4 .l67ZKWaTyRadDGEcLWcE { background-color:#f005 }
 
 
 /* Hide Lottie animations in both main-trackList-curationButton and icon-only tertiary buttons */
@@ -236,10 +285,10 @@ box-sizing: border-box;
 .e-9960-button-tertiary--icon-only:not([data-testid="fullscreen-mode-button"]) .e-9960-button__icon-wrapper div > div {
   opacity: 0 ;
 }
-
+/* Button-sc-1dqy6lx-0 Button-buttonTertiary-small-iconOnly-useBrowserDefaultFocusStyle e-9960-overflow-wrap-anywhere e-9960-button-tertiary--icon-only YAAoKkR7K4K9j_dfXQn_ */
 /* Add spinner in place of hidden animations if no visible SVG icon, excluding fullscreen button */
 .main-trackList-curationButton:not(:has(.e-9960-icon.e-9960-baseline))::after,
-.e-9960-button-tertiary--icon-only:not(:has(.e-9960-icon.e-9960-baseline)):not([data-testid="fullscreen-mode-button"])::after {
+.e-9960-button-tertiary--icon-only:not(:has(.e-9960-icon.e-9960-baseline)):not([data-testid="fullscreen-mode-button"]):not(.Button-buttonTertiary-small-iconOnly-useBrowserDefaultFocusStyle)::after {
   content: '';
   display: block;
   width: 16px;
@@ -248,9 +297,8 @@ box-sizing: border-box;
   border-top-color: transparent;
   border-left-color: transparent;
   border-radius: 50%;
-  animation: spin 0.8s linear infinite;
+  animation: spin .5s linear infinite;
   position: absolute;
-  top: 6px;
   right: 0;
   z-index: 9999;
   pointer-events: none;
@@ -292,9 +340,20 @@ box-sizing: border-box;
   --spice-text: var(--spice-color1) ;
 }
 /* ------------------------------------ Progress bar  ------------------------------------*/
+/*lowers progress bar and its numbers, so that playbar addons aren't behind the playbar*/
+.main-nowPlayingBar-center .progress-bar, 
+.playback-bar__progress-time-elapsed, 
+.main-playbackBarRemainingTime-container
+{ position: relative; top: 5px; }
+
+/*larger time numbers*/
+.playback-bar__progress-time-elapsed, 
+.main-playbackBarRemainingTime-container
+{ font-size: 15px; }
+
 .main-nowPlayingBar-center {
     max-width: 1200px;
-    width: 150%
+    width: 150%;
 }
 .x-progressBar-fillColor {
     background-color: var(--spice-color1) ;			/* progress bar FG*/
@@ -303,30 +362,28 @@ box-sizing: border-box;
     background-color: #4d4d4d ;						/* progress bar BG*/
 }
 /*Removes the white dot to only have FG and BG color*/
-.progress-bar__slider {
-     background-color: transparent; 
-     border:0; 
-     border-radius: 00%; 
-    display: none;
-    height: 0px;
-    width: 0px;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: left;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center
-}
+.progress-bar__slider { display: none !important; }
+
 /*Thicker bars*/
 .x-progressBar-progressBarBg 
-{ height: 120% ;
---progress-bar-radius: 4px ; } 
+{ height: 100% ;
+--progress-bar-radius: 1px ; } 
 .x-progressBar-sliderArea 
 { height: 100% ; } 
 .x-progressBar-fillColor 
 { height: 100% ; }
 
-
+/*extra button on right*/
+.main-nowPlayingBar-right {
+	bottom:20px; 
+	position: relative;
+}
+/* fullscreen mode*/
+.QdB2YtfEq0ks5O4QbtwX.poe3QmyrczMfT4aZNIok._6dEq1ZVxeUsyP_cwJlgR, div {
+--cinema-mode-bg-color-from: #101010;
+--cinema-mode-bg-color-to: #101010;
+}
+.hlDzKEohazBhJodv4mhe {--header-text-color: #ffffff;}
 /* ------------------------------------ Equalizers  ------------------------------------*/
 /*ON HOME PAGE*/
 /*Would hide original, but shortcut are gone anyways*/
@@ -392,7 +449,7 @@ input:checked~.x-toggle-indicatorWrapper {
 
 
 .Dropdown-menu {
-  background-color: #282828;
+  background-color: #00ff00;
   max-height: 30vh;
   max-width: 350px; 
   min-width: 145px;
@@ -451,10 +508,7 @@ button[aria-label="Playing"],
           transform: scale(1.1);
 }
 
-.main-trackList-trackListRow.main-trackList-active .main-trackList-rowTitle,
-.main-trackList-trackListRow.main-trackList-active .main-trackList-rowMarker {
-  color: var(--spice-color1) ;
-}
+
 
 #spicetify-group-session-menu > img {
   -webkit-filter: grayscale(100%) contrast(200%) ;
@@ -468,5 +522,3 @@ button[aria-label="Playing"],
   background-color: var(--spice-color1) ;
   filter: brightness(1.2) ;
 }
-
-
