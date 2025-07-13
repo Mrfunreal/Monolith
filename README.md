@@ -8,6 +8,7 @@ Most everything is dark, with some colorful highlights, the color of shich you c
 
 # Preview images
 <details><summary>Expand me ♫</summary>
+<img src="./img/liked.png">
 <img src="./img/library.png" width="300" height="auto">
 </details>
 
