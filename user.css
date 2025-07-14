@@ -55,7 +55,10 @@
 [data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href='/section/0JQ5DAuChZYPe9iDhh2mJz']) { display: none !important; } 
 /*Makes "Jump back in" and "Recently played" appear side by side. Because they're sorta useful*/
 [data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href="/section/0JQ5DAIiKWzVFULQfUm85X"]),
-[data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href="/genre/recently-played"]) { min-width:33%;  max-width: 41.5%; padding-left: 2.5%; }
+[data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href="/genre/recently-played"]) 
+{ min-width:33%;  max-width: 48.5%; }
+[data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href="/genre/recently-played"]) 
+{ padding-left: 2.5%; }
 
 /* ------------------------------------ Scrollbar settings ------------------------------------*/
 .os-scrollbar-track { width: 10px; left:6px;}
@@ -83,9 +86,9 @@
   display: none !important;
 }
 
-/* note icon: only on currently playing playlist */
+/* ♫ icon: only on currently playing playlist */
 .main-yourLibraryX-listItem[aria-selected="true"]::before {
-  content: "\266b"; /* ♫ */
+  content: '♫';
   position: absolute;
   top: 4px;
   right: 25px;
@@ -94,9 +97,9 @@
   color: var(--spice-color1);
 }
 
-/* eye icon: always on the viewed playlist */
+/*  👁 icon: always on the viewed playlist */
 .main-yourLibraryX-listItem .e-9960-box--tinted::before {
-  content: '\1F441';
+  content: '👁';
   position: absolute;
   top: 4px;
   right: 6px;
@@ -233,7 +236,7 @@ img[src="https://misc.scdn.co/liked-songs/liked-songs-300.jpg"].main-entityHeade
 
 /* Overlay the heart on top */
 .main-entityHeader-image:has(img[src*="liked-songs-300.jpg"])::after {
-   content: "\2764";
+   content: "❤";
   position: absolute;
   font-size: 2em;
   color: white;
