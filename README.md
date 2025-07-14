@@ -3,7 +3,7 @@
 A sleek and simple theme for Spicetify.<br> 
 Most everything is dark, with some colorful highlights, the color of shich you can modify.
 <div class="grid" markdown>
-<img src="./img/prev_Playlist.png" width="auto" height="455"> <img src="./img/Colors.png" width="auto" height="455">
+<img src="./img/prev_Playlist.png" width="auto" height="450"> <img src="./img/Colors.png" width="auto" height="450">
 </div>
 
 # Preview images
