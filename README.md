@@ -20,27 +20,28 @@ Most everything is dark, with some colorful highlights, the color of shich you c
 	- Lyrics screen fitting theme.
 	- Like and Unlike checkmark anims swapped for basic wait circle. (Couldn't be recolored, Hardcoded to be green, Looked odd.)
 - Home screen:
-	- Removes "Shortcuts" on top that keep rearranging.
-	- Removes "Jump Back in".
-	- Removes video section on bottom. Its just more reccomendations anyways and is laggy.
-	- Removes "Popular" reccomendations.
+	- Removed "Shortcuts" on top of home screen. <br>They're a worse version of "Recently Played" and "Jump back in" because they keep earranging
+	- Removed "Jump Back in".
+	- Removed video section on bottom. Its just more reccomendations anyways and is laggy.
+	- Removed "Popular" reccomendations.
 - Track list
 	- Header section compacted down, no background color.
-	- Removes "Preview/Summary" button.
+	- Removed "Preview/Summary" button.
 	- Currently playing is easily visible.
 	- Unavailable songs are highlighted dark red.
 	- Playing song has new equalizer. Waiting anim when paused. Both SVG anims.
 	- Always shows "Add to playlist" icon on playlists you do not own.
 - Library
-	- new icons for "looked at" and "now playing" playlists.
+	- Note icon (♫) displayed on currently playing library item.
+	- Eye icon (👁) displayed on currently looked at library item.
 - Player section
 	- Track info on bottom left has border aroudn cover art and stylized coloring.
 	- Wider and thicker progress bar.
 -Other
-	- "Now Playing" sidabard only shows song data and artist data. No more queue, merch, tour, credits.
+	- "Now Playing" sidebar only shows song data and artist data. No more queue, merch, tour, credits.
 
 ## Known bugs
-- "Add to library" wait circle _might_ attach to elements added by extensions. 
+- "Add to library" wait circle _might_ attach to elements added by extensions, and scale is a little off for "like playlists"
 
 
 ## Installation
