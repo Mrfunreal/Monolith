@@ -3,7 +3,7 @@
 A sleek and simple theme for Spicetify.<br> 
 Most everything is dark, with some colorful highlights, the color of shich you can modify.
 <div class="grid" markdown>
-<img src="./img/prev_Playlist.png" width="auto" height="455"> <img src="./img/Colors.png" width="auto" height="455">
+<img src="./img/prev_Playlist.png" width="auto" height="450"> <img src="./img/Colors.png" width="auto" height="450">
 </div>
 
 # Preview images
@@ -39,7 +39,8 @@ Most everything is dark, with some colorful highlights, the color of shich you c
 -Other
 	- "Now Playing" sidabard only shows song data and artist data. No more queue, merch, tour, credits.
 
-
+## Known bugs
+- "Add to library" wait circle _might_ attach to elements added by extensions. 
 
 
 ## Installation
