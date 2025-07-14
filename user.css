@@ -39,7 +39,7 @@
 .hW9km7ku6_iggdWDR_Lg.main-topBar-searchBar 
 { background-color: #242424; }
 /*homepage header with green line*/
- .main-home-filterChipsContainer {border-bottom: 1px solid #0f0; background-color: #101010}
+ .main-home-filterChipsContainer {border-bottom: 1px solid var(--spice-color1); background-color: #101010}
 /* ------------------------------------ Trash managment ------------------------------------*/
 .view-homeShortcutsGrid-shortcuts	{	display: none; }	/*no shortcuts on home screen. "Jump back in" and "Recently played" do the same and have no laggy gif	*/
 .main-actionBar-exploreButton		{	display: none; }	/*no playlist summary/preview																			*/
