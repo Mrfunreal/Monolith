@@ -20,9 +20,9 @@ Most everything is dark, with some colorful highlights, the color of shich you c
 	- Lyrics screen fitting theme.
 	- Like and Unlike checkmark anims swapped for basic wait circle. (Couldn't be recolored, Hardcoded to be green, Looked odd.)
 - Home screen:
-	- Removed "Shortcuts" on top of home screen. <br>They're a worse version of "Recently Played" and "Jump back in" because they keep earranging
+	- Removed "Shortcuts" on top of home screen.
 	- Removed "Jump Back in".
-	- Removed video section on bottom. Its just more reccomendations anyways and is laggy.
+	- Removed laggy video section on bottom.
 	- Removed "Popular" reccomendations.
 - Track list
 	- Header section compacted down, no background color.

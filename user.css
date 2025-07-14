@@ -38,7 +38,8 @@
 .GimJ6fo6WOYPyWNVpSr1.ZjfaJlGQZ42nCWjD3FDm,
 .hW9km7ku6_iggdWDR_Lg.main-topBar-searchBar 
 { background-color: #242424; }
-
+/*homepage header with green line*/
+ .main-home-filterChipsContainer {border-bottom: 1px solid #0f0; background-color: #101010}
 /* ------------------------------------ Trash managment ------------------------------------*/
 .view-homeShortcutsGrid-shortcuts	{	display: none; }	/*no shortcuts on home screen. "Jump back in" and "Recently played" do the same and have no laggy gif	*/
 .main-actionBar-exploreButton		{	display: none; }	/*no playlist summary/preview																			*/
@@ -53,12 +54,9 @@
 
 /*no "popular" reccomendations*/
 [data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href='/section/0JQ5DAuChZYPe9iDhh2mJz']) { display: none !important; } 
-/*Makes "Jump back in" and "Recently played" appear side by side. Because they're sorta useful*/
-[data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href="/section/0JQ5DAIiKWzVFULQfUm85X"]),
-[data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href="/genre/recently-played"]) 
-{ min-width:33%;  max-width: 48.5%; }
-[data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href="/genre/recently-played"]) 
-{ padding-left: 2.5%; }
+/*No "Jump back in"*/
+[data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href="/section/0JQ5DAIiKWzVFULQfUm85X"])  { display: none !important; } 
+
 
 /* ------------------------------------ Scrollbar settings ------------------------------------*/
 .os-scrollbar-track { width: 10px; left:6px;}
@@ -70,25 +68,19 @@
 	--background-base: var(--spice-text) !important;
     --background-highlight: var(--spice-color2) !important;
     --background-press: var(--spice-color3) !important;
-	--decorative-subdued: var(--spice-color2) !important;
+	--decorative-subdued: rgba(var(--spice-rgb-color1), 0.6) !important;
 }
 /* ------------------------------------ Library sidebar ------------------------------------*/
 /*lowers text and play icon a little to be better centered in box*/
-.HeaderArea, .jpzxju { align-items: flex-end; padding-left: 6px; }
-/*padds playing icon a little more to the left.*/
-.IZq_xBKdh88HLD4QY90X  { margin-right: 20px }
-
+.main-rootlist-wrapper ._EFIA9HjgZxxgTSZzQcg {  position:absolute; top:4px; left:4px; width:89%; pointer-events: none; }
 /*titles less wide to accomodate new icons*/
-.main-yourLibraryX-listItem[aria-selected="true"] .Areas__InteractiveArea-sc-8gfrea-0.Areas__Column-sc-8gfrea-5.bJSfgC.Column-sm {max-width: 85%;}
-
+.main-yourLibraryX-listItem[aria-selected="true"] ._EFIA9HjgZxxgTSZzQcg {max-width: 85%;}
 /* Hide original speaker icon */
-.PUipCs3_0Qott0Sru3pB:not(.Button-buttonTertiary-small-iconOnly-useBrowserDefaultFocusStyle-condensedAll) svg {
-  display: none !important;
-}
+.PUipCs3_0Qott0Sru3pB:not(.Button-buttonTertiary-small-iconOnly-useBrowserDefaultFocusStyle-condensedAll) svg { display: none !important; }
 
-/* ♫ icon: only on currently playing playlist */
+/* NOTE icon: only on currently playing playlist */
 .main-yourLibraryX-listItem[aria-selected="true"]::before {
-  content: '♫';
+  content: '\266B';
   position: absolute;
   top: 4px;
   right: 25px;
@@ -97,9 +89,9 @@
   color: var(--spice-color1);
 }
 
-/*  👁 icon: always on the viewed playlist */
+/*  EYE icon: always on the viewed playlist */
 .main-yourLibraryX-listItem .e-9960-box--tinted::before {
-  content: '👁';
+  content: '\1F441';
   position: absolute;
   top: 4px;
   right: 6px;
@@ -116,7 +108,6 @@
   transform: none !important;
   scale: none !important;
 }
-
 
 /* Playlist you're currently *viewing* EXCEPT if it's the one currently *playing* */
 .main-yourLibraryX-listItem:not([aria-selected="true"]) .e-9960-box--tinted::after {
@@ -143,7 +134,7 @@
 	border-right: 2px solid var(--spice-color1) ;
 	pointer-events: none;
 }
-/*all library boxes be right 90Â° angled*/
+/*non rounded corners on the backgrounds.*/
 .main-yourLibraryX-listItem,
 .e-9960-box:not(.main-card-cardContainer),
 .RowButton-sc-xxkq4e-0,
@@ -153,7 +144,14 @@
 /*Album/Playlist/Artist text on unfiltered library sidebar*/
 .ListRowDetails__LineClamp-sc-sozu4l-1.LineClamp-1 {  font-style: italic; font-weight: 100; }
 
-
+/*no backgrounds on transparent images*/
+.x-entityImage-imageContainer.GSgVaqJa8VEp5mKoIN0b.x-entityImage-xsmall, .GOcsybnoHYyJGQGDRuwj { background-color:transparent;}
+/*colored background for folders.*/
+.IUWOW7ZOUwEs57jTIQRP { background-color: var(--spice-color3)}
+/*artists images not round*/
+.MxmW8QkHqHWtuhO589PV {
+    border-radius: 6px;
+}
 /* ------------------------------------ Lyrics Screen ------------------------------------*/
 .VznvlkEh9fhk1AKhhZwe
 {
@@ -209,36 +207,32 @@
     background: linear-gradient(rgba(var(--spice-rgb-color1),1),rgba(var(--spice-rgb-color1),1)) no-repeat 50%/1px 100%
 }
 
-/*liked playlist image*/
-/* Step 1: Target the image and hide it */
+/*new liked songs icon*/
+/* Hide the original Liked Songs image */
 img[src*="liked-songs-300.jpg"] {
   opacity: 0 !important;
   position: absolute;
   z-index: -1;
 }
 
-/* Step 2: Target the container and insert custom overlay */
-img[src="https://misc.scdn.co/liked-songs/liked-songs-300.jpg"].main-entityHeader-image,
-.main-entityHeader-image {
+/* Shared heart overlay logic for all containers */
+.main-entityHeader-image:has(img[src*="liked-songs-300.jpg"]),
+.x-entityImage-imageContainer:has(img[src*="liked-songs-300.jpg"]),
+.GOcsybnoHYyJGQGDRuwj:has(img[src*="liked-songs-300.jpg"]) {
+  background: linear-gradient(135deg, rgba(var(--spice-rgb-color1), .3), rgba(var(--spice-rgb-color1), 1)) !important;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4em;
   color: white;
 }
 
-/* Step 3: Add the heart using ::after */
-.main-entityHeader-image:has(img[src*="liked-songs-300.jpg"]) {
-  background: linear-gradient(135deg, rgba(var(--spice-rgb-color1), .3), rgba(var(--spice-rgb-color1), 1)) !important;
-  position: relative;
-}
-
-/* Overlay the heart on top */
-.main-entityHeader-image:has(img[src*="liked-songs-300.jpg"])::after {
-   content: "❤";
+/* Add the heart overlay */
+.main-entityHeader-image:has(img[src*="liked-songs-300.jpg"])::after,
+.x-entityImage-imageContainer:has(img[src*="liked-songs-300.jpg"])::after,
+.GOcsybnoHYyJGQGDRuwj:has(img[src*="liked-songs-300.jpg"])::after {
+  content: "\2764";
   position: absolute;
-  font-size: 2em;
   color: white;
   z-index: 2;
   pointer-events: none;
@@ -246,6 +240,15 @@ img[src="https://misc.scdn.co/liked-songs/liked-songs-300.jpg"].main-entityHeade
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* Adjust font sizes per container type */
+.main-entityHeader-image:has(img[src*="liked-songs-300.jpg"]) { font-size: 4em; }
+.x-entityImage-imageContainer:has(img[src*="liked-songs-300.jpg"]) { font-size: 2em; }
+.GOcsybnoHYyJGQGDRuwj:has(img[src*="liked-songs-300.jpg"]) { font-size: 2.2em; }
+
+.main-entityHeader-image:has(img[src*="liked-songs-300.jpg"])::after { font-size: 2em; }
+.x-entityImage-imageContainer:has(img[src*="liked-songs-300.jpg"])::after { font-size: 1.2em; }
+.GOcsybnoHYyJGQGDRuwj:has(img[src*="liked-songs-300.jpg"])::after { font-size: 2em; }
 
 
 /* ------------------------------------ TRACKLIST EDITS ------------------------------------*/
@@ -288,7 +291,6 @@ box-sizing: border-box;
 .e-9960-button-tertiary--icon-only:not([data-testid="fullscreen-mode-button"]) .e-9960-button__icon-wrapper div > div {
   opacity: 0 ;
 }
-/* Button-sc-1dqy6lx-0 Button-buttonTertiary-small-iconOnly-useBrowserDefaultFocusStyle e-9960-overflow-wrap-anywhere e-9960-button-tertiary--icon-only YAAoKkR7K4K9j_dfXQn_ */
 /* Add spinner in place of hidden animations if no visible SVG icon, excluding fullscreen button */
 .main-trackList-curationButton:not(:has(.e-9960-icon.e-9960-baseline))::after,
 .e-9960-button-tertiary--icon-only:not(:has(.e-9960-icon.e-9960-baseline)):not([data-testid="fullscreen-mode-button"]):not(.Button-buttonTertiary-small-iconOnly-useBrowserDefaultFocusStyle)::after {
@@ -322,10 +324,8 @@ box-sizing: border-box;
 /* -------------------------------------------------- Playbar Section  --------------------------------------------------*/
 
 /* ------------------------------------ Now Playing (Bottom left) ------------------------------------*/
-.main-nowPlayingWidget-coverArt { /*Cover base box*/
-  width: 72px;
-  height: 72px;
-}
+.main-nowPlayingWidget-coverArt {  width: 72px; height: 72px;} /*Cover base box*/
+
 .main-nowPlayingWidget-coverArt .cover-art-image  { /*Cover itself. They're two separate things for some reason.*/
   width: 72px;
   height: 72px;
@@ -390,7 +390,7 @@ box-sizing: border-box;
 /* ------------------------------------ Equalizers  ------------------------------------*/
 /*ON HOME PAGE*/
 /*Would hide original, but shortcut are gone anyways*/
-/* .view-homeShortcutsGrid-equaliser { height: 34px; width: 34px; display: none ; pointer-events: none; }*/
+ .view-homeShortcutsGrid-equaliser { display:none; }
 
 /*IN PLAYLIST*/
 /*Hides original equalizer*/
