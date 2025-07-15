@@ -45,6 +45,12 @@
 .main-actionBar-exploreButton		{	display: none; }	/*no playlist summary/preview																			*/
 .SsbbQFeJun2Ts_EIktpr				{	display: none; }	/*no laggy video reccomendation on bottom of homepage													*/
 
+/*removes tiny little dot under active options. Why are they there if the buttons are colored anyways.*/
+.main-genericButton-button.main-genericButton-buttonActiveDot:after,	/*extra settings*/
+.E1ikFpkPVaoLplbQdrTP:after,											/*shuffle*/
+.fZjbVIqD8Xc3auRZOxu5:before, .vW9NFcNIj8useE43Vx9G:before				/*loop*/
+{ display: none; }
+
 /* "Now playing" sidebar only shows album image and song name and "About artist" No more queue, merch, tour, credis*/
 .main-nowPlayingView-section.main-nowPlayingView-queue,
 .main-nowPlayingView-section.main-nowPlayingView-merch, 
@@ -166,8 +172,10 @@
 .blfR_YJUsKUvdgTejBSb .w1TBi3o5CTM7zW1EB3Bm { color: #cdcdcd ;}	/* Playlist header subtext color (saves, track count)	*/
 .main-entityHeader-creatorButton { color: var(--spice-color1) ;}	/* Playlist header Creator color						*/
 .playlist-playlist-playlistDescription { color: white ;}			/* Playlist header description color					*/
-/*.main-image-loaded.main-entityHeader-image  { border: 2px; border-style: groove; border-color: var(--spice-color1) ; } /*album art border*/
-/*.e-9960-text.encore-text-headline-large.encore-internal-color-text-base {  text-shadow: 5px 5px var(--spice-color2); } /*playlist name shadow/ artist page artist name shadow as well.*/
+/*.main-entityHeader-image  { border: 1px; border-style: solid; border-color: var(--spice-color1)} /*album art border*/
+/*.e-9960-text.encore-text-headline-large.encore-internal-color-text-base {  text-shadow: 5px 5px var(--spice-color3); } /*playlist name shadow/ artist page artist name shadow as well.*/
+
+
 
 /*top header less height*/
 .main-entityHeader-container.JYKKZFIXuf9lIHVeszuS {max-height: 260px;min-height: 200px}
@@ -255,11 +263,14 @@ img[src*="liked-songs-300.jpg"] {
 /*bigger play buttons*/
 .main-trackList-rowImagePlayButton {
 	color: var(--spice-color1) ;
-	left: -8px;
+	left: -18px;
 	top: -4px;
 	height: 150%;
 	width: 150%;
+	align-items: center; 
 }
+.main-trackList-number {width: 36px;text-align: center;} /*centering numbers on track list*/
+
 /*Always show "add to playlist" button*/
 .main-trackList-curationButton[aria-checked=false] { opacity: 1 }
 /*BG color and border on playing track*/
@@ -271,8 +282,7 @@ box-sizing: border-box;
  /*for of actively playing song*/
 .main-trackList-trackListRow.main-trackList-active .UudGCx16EmBkuFPllvss ,
 .main-trackList-trackListRow.main-trackList-active .main-trackList-rowTitle 
-{ font-size-adjust: .6; 
-}
+{ font-size-adjust: .6;  }
 
 
 /*BG of hovered over and selected tracks.*/
@@ -376,21 +386,23 @@ box-sizing: border-box;
 .x-progressBar-fillColor 
 { height: 100% ; }
 
-/*extra button on right*/
+/* ------------------------------------ EXTRAS ON RIGHT  ------------------------------------*/
 .main-nowPlayingBar-right {
 	bottom:20px; 
 	position: relative;
 }
-/* fullscreen mode*/
+
+
+/* ------------------------------------ FULLSCREEN MODE  ------------------------------------*/
 .QdB2YtfEq0ks5O4QbtwX.poe3QmyrczMfT4aZNIok._6dEq1ZVxeUsyP_cwJlgR, div {
 --cinema-mode-bg-color-from: #101010;
 --cinema-mode-bg-color-to: #101010;
 }
 .hlDzKEohazBhJodv4mhe {--header-text-color: #ffffff;}
-/* ------------------------------------ Equalizers  ------------------------------------*/
+/* ------------------------------------ EQUALIZERS  ------------------------------------*/
 /*ON HOME PAGE*/
 /*Would hide original, but shortcut are gone anyways*/
- .view-homeShortcutsGrid-equaliser { display:none; }
+.view-homeShortcutsGrid-equaliser { display:none; }
 
 /*IN PLAYLIST*/
 /*Hides original equalizer*/
@@ -400,7 +412,7 @@ box-sizing: border-box;
 .main-trackList-active::before {
 content: '' ;
 position: absolute ;
-left:6px ;
+left:9px ;
 top: 12px ;
 height: 30px ;
 width: 30px ;
