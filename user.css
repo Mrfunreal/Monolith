@@ -1,7 +1,7 @@
 /*
  ******************************************************************
  * Monolith (https://github.com/Mrfunreal/Monolith)               *
- * © 2025 MrFunreal. All rights reserved.                         *
+ * Copyright: 2025 MrFunreal. All rights reserved.                *
  * License: CC BY-NC-ND 4.0 International                         *
  * (https://creativecommons.org/licenses/by-nc-nd/4.0/)           *
  * For licensing inquiries, contact: https://github.com/Mrfunreal *
@@ -428,7 +428,7 @@ box-sizing: border-box;
 	height: 30px ;
 	width: 30px ;
 	background-size: cover  ;
-	background-image: url("data:image/svg*xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><defs><mask id='bars-mask'><rect width='30' height='30' fill='white'/><rect x='2' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='5;20;10;15;10' dur='0.8s' repeatCount='indefinite'/><animate attributeName='y' values='15;5;10;7;10' dur='0.8s' repeatCount='indefinite'/></rect><rect x='9' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='10;15;5;20;10' dur='0.9s' repeatCount='indefinite'/><animate attributeName='y' values='10;7;15;5;10' dur='0.9s' repeatCount='indefinite'/></rect><rect x='16' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='15;5;20;10;15' dur='0.7s' repeatCount='indefinite'/><animate attributeName='y' values='7;15;5;10;7' dur='0.7s' repeatCount='indefinite'/></rect><rect x='23' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='10;20;15;5;10' dur='0.85s' repeatCount='indefinite'/><animate attributeName='y' values='10;5;7;15;10' dur='0.85s' repeatCount='indefinite'/></rect></mask></defs><rect width='30' height='30' fill='%23101010' mask='url(%23bars-mask)'/></svg>");
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><defs><mask id='bars-mask'><rect width='30' height='30' fill='white'/><rect x='2' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='5;20;10;15;10' dur='0.8s' repeatCount='indefinite'/><animate attributeName='y' values='15;5;10;7;10' dur='0.8s' repeatCount='indefinite'/></rect><rect x='9' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='10;15;5;20;10' dur='0.9s' repeatCount='indefinite'/><animate attributeName='y' values='10;7;15;5;10' dur='0.9s' repeatCount='indefinite'/></rect><rect x='16' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='15;5;20;10;15' dur='0.7s' repeatCount='indefinite'/><animate attributeName='y' values='7;15;5;10;7' dur='0.7s' repeatCount='indefinite'/></rect><rect x='23' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='10;20;15;5;10' dur='0.85s' repeatCount='indefinite'/><animate attributeName='y' values='10;5;7;15;10' dur='0.85s' repeatCount='indefinite'/></rect></mask></defs><rect width='30' height='30' fill='%23101010' mask='url(%23bars-mask)'/></svg>");
 	background-color: var(--spice-color1) ;
 	pointer-events: none ;
 	z-index: -1 ;
@@ -442,7 +442,7 @@ box-sizing: border-box;
 	height: 30px ;
 	width: 30px ;
 	background-size: cover  ;
-	background-image: url("data:image/svg*xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><defs><mask id='dots'><rect width='30' height='30' fill='white'/><circle cx='5' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0s'/></circle><circle cx='12' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0.15s'/></circle><circle cx='19' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0.3s'/></circle><circle cx='26' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0.45s'/></circle></mask></defs><rect width='30' height='30' fill='%23101010' mask='url(%23dots)'/></svg>");
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><defs><mask id='dots'><rect width='30' height='30' fill='white'/><circle cx='5' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0s'/></circle><circle cx='12' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0.15s'/></circle><circle cx='19' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0.3s'/></circle><circle cx='26' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0.45s'/></circle></mask></defs><rect width='30' height='30' fill='%23101010' mask='url(%23dots)'/></svg>");
 	background-color: var(--spice-color1) ;
 	pointer-events: none ;
 	z-index: -1 ;
