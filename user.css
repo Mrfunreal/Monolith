@@ -1,15 +1,15 @@
 /*
- ╭──────────────────────────────────────────────────────────────────╮ 
- │ Monolith (https://github.com/Mrfunreal/Monolith)                 │
- │ © 2025 MrFunreal. All rights reserved.                           │
- │ License: CC BY-NC-ND 4.0 International                           │
- │ (https://creativecommons.org/licenses/by-nc-nd/4.0/)             │
- │ For licensing inquiries, contact: https://github.com/Mrfunreal   │
- ╰──────────────────────────────────────────────────────────────────╯
+ ******************************************************************
+ * Monolith (https://github.com/Mrfunreal/Monolith)               *
+ * © 2025 MrFunreal. All rights reserved.                         *
+ * License: CC BY-NC-ND 4.0 International                         *
+ * (https://creativecommons.org/licenses/by-nc-nd/4.0/)           *
+ * For licensing inquiries, contact: https://github.com/Mrfunreal *
+ ******************************************************************
  */
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ NEW FONT -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto*Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 * {
 	font-family: 'Noto Sans', sans-serif !important;
 }
@@ -33,7 +33,7 @@
 }
 /*Base color settings*/
 .encore-light-theme,.encore-light-theme .encore-base-set {
-	--text-bright-accent: var(--spice-color2) !important;   /*link texts, like "change" when adding songs to playlist*/                            	
+	--text-bright-accent: var(--spice-color2) !important;   /*link texts, like "change" when adding songs to playlist*/
 }
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- RANDOM STUFF -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
  /*follow button*/
@@ -43,7 +43,7 @@
 /*fix searchbar and playlist edit boxes*/
 .main-playlistEditDetailsModal-container,
 .GimJ6fo6WOYPyWNVpSr1.ZjfaJlGQZ42nCWjD3FDm,
-.hW9km7ku6_iggdWDR_Lg.main-topBar-searchBar 
+.hW9km7ku6_iggdWDR_Lg.main-topBar-searchBar
 { background-color: #242424; }
 /*homepage header with green line*/
  .main-home-filterChipsContainer {border-bottom: 1px solid var(--spice-color1); background-color: var(--spice-main)}
@@ -52,6 +52,7 @@
 .main-userWidget-box .main-userWidget-hasAvatar { width: 59px !important; height: auto !important}
 .main-userWidget-hasAvatar > div { width: 59px !important; height: auto !important }
 .main-userWidget-hasAvatar img { border-radius: 0px}
+
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- TRASH MANAGMENT -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 .view-homeShortcutsGrid-shortcuts	{	display: none; }	/*no shortcuts on home screen. "Jump back in" and "Recently played" do the same and have no laggy gif	*/
 .main-actionBar-exploreButton		{	display: none; }	/*no playlist summary/preview																			*/
@@ -65,20 +66,21 @@
 
 /* "Now playing" sidebar only shows album image and song name and "About artist" No more queue, merch, tour, credis*/
 .main-nowPlayingView-section.main-nowPlayingView-queue,
-.main-nowPlayingView-section.main-nowPlayingView-merch, 
+.main-nowPlayingView-section.main-nowPlayingView-merch,
 .main-nowPlayingView-section.main-nowPlayingView-artistOnTour,
 .main-nowPlayingView-section.main-nowPlayingView-credits
-{	display: none; }	
+{	display: none; }
 
 /*no "popular" reccomendations*/
-[data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href='/section/0JQ5DAuChZYPe9iDhh2mJz']) { display: none !important; } 
+[data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href='/section/0JQ5DAuChZYPe9iDhh2mJz']) { display: none !important; }
 /*No "Jump back in"*/
-[data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href="/section/0JQ5DAIiKWzVFULQfUm85X"])  { display: none !important; } 
+[data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href="/section/0JQ5DAIiKWzVFULQfUm85X"])  { display: none !important; }
 
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- SCROLLBAR SETTINGS -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 .os-scrollbar-track { width: 10px; left:6px;}
 .os-scrollbar-handle { background-color: var(--spice-color2) ;}
+
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- FILTER BUTTONS -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 .ChipInnerComponent-sm-selected-secondary,
 .ChipInnerComponent-sm-selected {
@@ -120,8 +122,8 @@
 /*hoverable buttons. Libary background, mainmenu showcases.*/
 .e-9960-box--interactive:hover:after,
 .e-9960-box--interactive:hover,
-.view-homeShortcutsGrid-shortcut:hover { 
-	background-color: var(--spice-color3) ; 
+.view-homeShortcutsGrid-shortcut:hover {
+	background-color: var(--spice-color3) ;
 	transition: none !important;
 	transform: none !important;
 	scale: none !important;
@@ -167,9 +169,8 @@
 /*colored background for folders.*/
 .IUWOW7ZOUwEs57jTIQRP { background-color: var(--spice-color3)}
 /*artists images not round*/
-.MxmW8QkHqHWtuhO589PV {
-	border-radius: 6px;
-}
+.MxmW8QkHqHWtuhO589PV { border-radius: 6px; }
+
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- LYRICS SCREEN -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 .VznvlkEh9fhk1AKhhZwe
 {
@@ -180,18 +181,17 @@
 	--lyrics-color-messaging: rgb(255 255 255 / 75%) !important;	/* No idea */
 	text-shadow: 5px 5px var(--spice-color3)
 }
-/*
+/* This would be custom "no lyrics" text, but i scrapped the idea.
 .vkO5F4KbLk8mbjZoy1Lf { position: relative; color: transparent !important; text-shadow: 0px 0px;  text-align:center; align-content:center}
 .vkO5F4KbLk8mbjZoy1Lf::after { content: "Guess, lol."; white-space: pre; color: var(--spice-text) !important; position: absolute; top: 0; left: 0; text-shadow: 5px 5px var(--spice-color3); text-align:center; align-content:center}
 */
+
 /*  -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- PLAYLIST/AUDIOBOOK HEADER -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 .blfR_YJUsKUvdgTejBSb .w1TBi3o5CTM7zW1EB3Bm { color: #cdcdcd ;}	/* Playlist header subtext color (saves, track count)	*/
 .main-entityHeader-creatorButton { color: var(--spice-color1) ;}	/* Playlist header Creator color						*/
 .playlist-playlist-playlistDescription { color: white ;}			/* Playlist header description color					*/
 /*.main-entityHeader-image  { border: 1px; border-style: solid; border-color: var(--spice-color1)} /*album art border*/
 /*.e-9960-text.encore-text-headline-large.encore-internal-color-text-base {  text-shadow: 5px 5px var(--spice-color3); } /*playlist name shadow/ artist page artist name shadow as well.*/
-
-
 
 /*top header less height*/
 .main-entityHeader-container.JYKKZFIXuf9lIHVeszuS {max-height: 260px;min-height: 200px}
@@ -228,7 +228,7 @@
 
 /*header separator color*/
 .main-trackList-trackListHeader:hover .I7SbihsVaE4CAUqLMa45,.main-trackList-trackList.x15L1JFSJDsSz7tzE69K .I7SbihsVaE4CAUqLMa45 {
-	  background: linear-gradient(rgba(var(--spice-rgb-color1),1),rgba(var(--spice-rgb-color1),1)) no-repeat 50%/1px 100%
+	background: linear-gradient(rgba(var(--spice-rgb-color1),1),rgba(var(--spice-rgb-color1),1)) no-repeat 50%/1px 100%
 }
 
 /*new liked songs icon*/
@@ -266,13 +266,13 @@ img[src*="liked-songs-300.jpg"] {
 }
 
 /* Adjust font sizes per container type */
-.main-entityHeader-image:has(img[src*="liked-songs-300.jpg"]) { font-size: 4em; }
-.x-entityImage-imageContainer:has(img[src*="liked-songs-300.jpg"]) { font-size: 2em; }
-.GOcsybnoHYyJGQGDRuwj:has(img[src*="liked-songs-300.jpg"]) { font-size: 2.2em; }
+.main-entityHeader-image:has(img[src*="liked-songs-300.jpg"])				{ font-size: 4em;	}
+.x-entityImage-imageContainer:has(img[src*="liked-songs-300.jpg"])			{ font-size: 2em;	}
+.GOcsybnoHYyJGQGDRuwj:has(img[src*="liked-songs-300.jpg"])					{ font-size: 2.2em;	}
 
-.main-entityHeader-image:has(img[src*="liked-songs-300.jpg"])::after { font-size: 2em; }
-.x-entityImage-imageContainer:has(img[src*="liked-songs-300.jpg"])::after { font-size: 1.2em; }
-.GOcsybnoHYyJGQGDRuwj:has(img[src*="liked-songs-300.jpg"])::after { font-size: 2em; }
+.main-entityHeader-image:has(img[src*="liked-songs-300.jpg"])::after		{ font-size: 2em;	}
+.x-entityImage-imageContainer:has(img[src*="liked-songs-300.jpg"])::after	{ font-size: 1.2em;	}
+.GOcsybnoHYyJGQGDRuwj:has(img[src*="liked-songs-300.jpg"])::after			{ font-size: 2em;	}
 
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- TRACKLIST EDITS -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
@@ -306,13 +306,13 @@ box-sizing: border-box;
 }
  /*for of actively playing song*/
 .main-trackList-trackListRow.main-trackList-active .UudGCx16EmBkuFPllvss ,
-.main-trackList-trackListRow.main-trackList-active .main-trackList-rowTitle 
+.main-trackList-trackListRow.main-trackList-active .main-trackList-rowTitle
 { font-size-adjust: .6;  }
 
 
 /*BG of hovered over and selected tracks.*/
 .Xo8dgIGCCWjHXWBoKhaV .main-rootlist-wrapper { --spice-rgb-selected-row: var(--spice-rgb-color1) }
-/*adjusted width for playlists with 1000+ songs*/
+/*adjusted width for playlists with 1000* songs*/
 .main-trackList-rowSectionIndex {width: 20%;}
 
 /*unavailable songs*/
@@ -376,7 +376,7 @@ box-sizing: border-box;
 .playback-bar__progress-time-elapsed, .main-playbackBarRemainingTime-container { position: relative; top: 7px; }
 
 /*larger time numbers*/
-.playback-bar__progress-time-elapsed, 
+.playback-bar__progress-time-elapsed,
 .main-playbackBarRemainingTime-container
 { font-size: 15px; }
 
@@ -394,8 +394,8 @@ box-sizing: border-box;
 .progress-bar__slider { display: none !important; }
 
 /*Thicker bars*/
-.x-progressBar-progressBarBg	{ height: 100% ; --progress-bar-radius: 0px ; } 
-.x-progressBar-sliderArea		{ height: 100% ; } 
+.x-progressBar-progressBarBg	{ height: 100% ; --progress-bar-radius: 0px ; }
+.x-progressBar-sliderArea		{ height: 100% ; }
 .x-progressBar-fillColor		{ height: 100% ; }
 .progress-bar { height: 15px ; }
 .player-controls__buttons { margin-top: 10px; margin-bottom: -5px; }
@@ -427,8 +427,8 @@ box-sizing: border-box;
 	top: 12px ;
 	height: 30px ;
 	width: 30px ;
-	background-size: cover  ; 
-	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><defs><mask id='bars-mask'><rect width='30' height='30' fill='white'/><rect x='2' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='5;20;10;15;10' dur='0.8s' repeatCount='indefinite'/><animate attributeName='y' values='15;5;10;7;10' dur='0.8s' repeatCount='indefinite'/></rect><rect x='9' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='10;15;5;20;10' dur='0.9s' repeatCount='indefinite'/><animate attributeName='y' values='10;7;15;5;10' dur='0.9s' repeatCount='indefinite'/></rect><rect x='16' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='15;5;20;10;15' dur='0.7s' repeatCount='indefinite'/><animate attributeName='y' values='7;15;5;10;7' dur='0.7s' repeatCount='indefinite'/></rect><rect x='23' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='10;20;15;5;10' dur='0.85s' repeatCount='indefinite'/><animate attributeName='y' values='10;5;7;15;10' dur='0.85s' repeatCount='indefinite'/></rect></mask></defs><rect width='30' height='30' fill='%23101010' mask='url(%23bars-mask)'/></svg>");
+	background-size: cover  ;
+	background-image: url("data:image/svg*xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><defs><mask id='bars-mask'><rect width='30' height='30' fill='white'/><rect x='2' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='5;20;10;15;10' dur='0.8s' repeatCount='indefinite'/><animate attributeName='y' values='15;5;10;7;10' dur='0.8s' repeatCount='indefinite'/></rect><rect x='9' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='10;15;5;20;10' dur='0.9s' repeatCount='indefinite'/><animate attributeName='y' values='10;7;15;5;10' dur='0.9s' repeatCount='indefinite'/></rect><rect x='16' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='15;5;20;10;15' dur='0.7s' repeatCount='indefinite'/><animate attributeName='y' values='7;15;5;10;7' dur='0.7s' repeatCount='indefinite'/></rect><rect x='23' width='4' height='10' y='10' fill='black'><animate attributeName='height' values='10;20;15;5;10' dur='0.85s' repeatCount='indefinite'/><animate attributeName='y' values='10;5;7;15;10' dur='0.85s' repeatCount='indefinite'/></rect></mask></defs><rect width='30' height='30' fill='%23101010' mask='url(%23bars-mask)'/></svg>");
 	background-color: var(--spice-color1) ;
 	pointer-events: none ;
 	z-index: -1 ;
@@ -441,8 +441,8 @@ box-sizing: border-box;
 	top: 12px ;
 	height: 30px ;
 	width: 30px ;
-	background-size: cover  ; 
-	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><defs><mask id='dots'><rect width='30' height='30' fill='white'/><circle cx='5' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0s'/></circle><circle cx='12' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0.15s'/></circle><circle cx='19' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0.3s'/></circle><circle cx='26' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0.45s'/></circle></mask></defs><rect width='30' height='30' fill='%23101010' mask='url(%23dots)'/></svg>");
+	background-size: cover  ;
+	background-image: url("data:image/svg*xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><defs><mask id='dots'><rect width='30' height='30' fill='white'/><circle cx='5' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0s'/></circle><circle cx='12' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0.15s'/></circle><circle cx='19' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0.3s'/></circle><circle cx='26' cy='15' r='3' fill='black'><animate attributeName='cy' values='15;10;15' dur='1s' repeatCount='indefinite' begin='0.45s'/></circle></mask></defs><rect width='30' height='30' fill='%23101010' mask='url(%23dots)'/></svg>");
 	background-color: var(--spice-color1) ;
 	pointer-events: none ;
 	z-index: -1 ;
@@ -456,5 +456,5 @@ box-sizing: border-box;
 .main-trackList-active:not(:has(.main-trackList-number))::after { opacity: 0 ; }
 /*Hides Play/Pause on actively playing song.*/
 .main-trackList-active .main-trackList-rowImagePlayButton,
-.main-trackList-active .main-trackList-number 
+.main-trackList-active .main-trackList-number
 { opacity: 0 !important; }
