@@ -1,9 +1,9 @@
 # Monolith
 
 A sleek and simple theme for Spicetify.<br> 
-Most everything is dark, with some colorful highlights, the color of shich you can modify.
+Most everything is dark, with some colorful highlights, the color of which you can modify.
 <div class="grid" markdown>
-<img src="./img/prev_Playlist.png" width="auto" height="450"> <img src="./img/Colors.png" width="auto" height="450">
+<img src="./img/prev_Playlist.png" width="auto" height="445"> <img src="./img/Colors.png" width="auto" height="445">
 </div>
 
 # Preview images
@@ -15,6 +15,7 @@ Most everything is dark, with some colorful highlights, the color of shich you c
 ## Notable features
 - General:
 	- Font changed to "Noto Sans" for nicer readability.
+	- Your own avatar on top right is larger.
 	- Thinner scrollbars.
 	- Liked songs playlist has new fitting scheme.
 	- Lyrics screen fitting theme.
@@ -37,12 +38,12 @@ Most everything is dark, with some colorful highlights, the color of shich you c
 - Player section
 	- Track info on bottom left has border aroudn cover art and stylized coloring.
 	- Wider and thicker progress bar.
+	- Removed useless little dot under active option (Crossplay, Lyrics, Ect) The buttons are colored, why the dots?.
 -Other
 	- "Now Playing" sidebar only shows song data and artist data. No more queue, merch, tour, credits.
 
-## Known bugs
+## Known Issues
 - "Add to library" wait circle _might_ attach to elements added by extensions, and scale is a little off for "like playlists"
-
 
 ## Installation
 It's recommended to find and install this theme on the [Spicetify Marketplace](https://github.com/CharlieS1103/spicetify-marketplace).<br> 
