@@ -9,7 +9,7 @@
  */
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ NEW FONT -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_ */
-@import url("https://fonts.googleapis.com/css2?family=Noto*Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 * {
 	font-family: 'Noto Sans', sans-serif !important;
 }
@@ -31,10 +31,18 @@
 	--background-highlight: var(--spice-color1) !important;		/* pause button hover*/
 	--background-press: var(--spice-color2) !important;			/* pause button click*/
 }
-/*Base color settings*/
-.encore-light-theme,.encore-light-theme .encore-base-set {
-	--text-bright-accent: var(--spice-color2) !important;   /*link texts, like "change" when adding songs to playlist*/
-}
+
+/*link texts, like "change" when adding songs to playlist*/
+.encore-light-theme, .encore-light-theme .encore-base-set { --text-bright-accent: var(--spice-color2) !important; }  
+.main-loadingIndicator-circle { fill: var(--spice-color1) } /*loading dots color*/
+
+/*hovered over links*/
+.link-subtle:hover { color: var(--spice-color1) }
+[data-context-menu-open=true]>a:only-child,a:not([data-encore-id]):focus,a:not([data-encore-id]):hover,a:not([data-encore-id])[data-context-menu-open=true] 
+{ color: var(--spice-color1);}
+
+/*playlist/album creator link*/
+.main-entityHeader-creatorButton:hover { text-decoration: underline; }
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- RANDOM STUFF -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
  /*follow button*/
 .Button-sc-y0gtbx-0:hover { background-color: var(--spice-color3); border: 1px solid;}
@@ -45,36 +53,27 @@
 .GimJ6fo6WOYPyWNVpSr1.ZjfaJlGQZ42nCWjD3FDm,
 .hW9km7ku6_iggdWDR_Lg.main-topBar-searchBar
 { background-color: #242424; }
-/*homepage header with green line*/
+/*homepage header with accent line*/
  .main-home-filterChipsContainer {border-bottom: 1px solid var(--spice-color1); background-color: var(--spice-main)}
 
-/*larger avatar*/
+/*larger square profile images on window top*/
 .main-userWidget-box .main-userWidget-hasAvatar { width: 59px !important; height: auto !important}
 .main-userWidget-hasAvatar > div { width: 59px !important; height: auto !important }
-.main-userWidget-hasAvatar img { border-radius: 0px}
+.main-userWidget-hasAvatar img { border-radius: 6px}
 
-/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- TRASH MANAGMENT -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
-.view-homeShortcutsGrid-shortcuts	{	display: none; }	/*no shortcuts on home screen. "Jump back in" and "Recently played" do the same and have no laggy gif	*/
-.main-actionBar-exploreButton		{	display: none; }	/*no playlist summary/preview																			*/
-.SsbbQFeJun2Ts_EIktpr				{	display: none; }	/*no laggy video reccomendation on bottom of homepage													*/
+/*square profile images on user page*/
+.profile-editImage-imageContainer img, .main-editImageButton-rounded { border-radius: 6px}
 
-/*removes tiny little dot under active options. Why are they there if the buttons are colored anyways.*/
-.main-genericButton-button.main-genericButton-buttonActiveDot:after,	/*extra settings*/
-.E1ikFpkPVaoLplbQdrTP:after,											/*shuffle*/
-.fZjbVIqD8Xc3auRZOxu5:before, .vW9NFcNIj8useE43Vx9G:before				/*loop*/
-{ display: none; }
-
-/* "Now playing" sidebar only shows album image and song name and "About artist" No more queue, merch, tour, credis*/
-.main-nowPlayingView-section.main-nowPlayingView-queue,
-.main-nowPlayingView-section.main-nowPlayingView-merch,
-.main-nowPlayingView-section.main-nowPlayingView-artistOnTour,
-.main-nowPlayingView-section.main-nowPlayingView-credits
-{	display: none; }
+/*Loopy Loop extension edits - making it fit to new bigger progressbar*/
+#loopy-loop-start, #loopy-loop-end { color: #fff !important; font-size-adjust: .6 !important; padding-top: 2px !important; }
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- HOME SCREEN -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
+.view-homeShortcutsGrid-shortcuts	{	display: none !important; }	/*no shortcuts on home screen. "Jump back in" and "Recently played" do the same and have no laggy gif	*/
+.SsbbQFeJun2Ts_EIktpr				{	display: none !important; }	/*no laggy video reccomendation on bottom of homepage													*/
 
 /*no "popular" reccomendations*/
-[data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href='/section/0JQ5DAuChZYPe9iDhh2mJz']) { display: none !important; }
+[data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href='/section/0JQ5DAuChZYPe9iDhh2mJz']) { display: none !important; !important; }
 /*No "Jump back in"*/
-[data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href="/section/0JQ5DAIiKWzVFULQfUm85X"])  { display: none !important; }
+[data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href="/section/0JQ5DAIiKWzVFULQfUm85X"])  { display: none !important; !important; }
 
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- SCROLLBAR SETTINGS -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
@@ -92,17 +91,17 @@
 }
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- LIBRARY SIDEBAR -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 /*lowers text and play icon a little to be better centered in box*/
-.main-rootlist-wrapper ._EFIA9HjgZxxgTSZzQcg {  position:absolute; top:4px; left:4px; width:89%; pointer-events: none; }
+.main-rootlist-wrapper ._EFIA9HjgZxxgTSZzQcg {  position:absolute; top:3px; left:4px; width:89%; pointer-events: none; }
 /*titles less wide to accomodate new icons*/
 .main-yourLibraryX-listItem[aria-selected="true"] ._EFIA9HjgZxxgTSZzQcg {max-width: 85%;}
 /* Hide original speaker icon */
-.PUipCs3_0Qott0Sru3pB:not(.Button-buttonTertiary-small-iconOnly-useBrowserDefaultFocusStyle-condensedAll) svg { display: none !important; }
+.PUipCs3_0Qott0Sru3pB:not(.Button-buttonTertiary-small-iconOnly-useBrowserDefaultFocusStyle-condensedAll) svg { display: none !important; !important; }
 
 /* NOTE icon: only on currently playing playlist */
 .main-yourLibraryX-listItem[aria-selected="true"]::before {
 	content: '\266B';
 	position: absolute;
-	top: 4px;
+	top: 3px;
 	right: 25px;
 	z-index: 2;
 	pointer-events: none;
@@ -113,7 +112,7 @@
 .main-yourLibraryX-listItem .e-9960-box--tinted::before {
 	content: '\1F441';
 	position: absolute;
-	top: 4px;
+	top: 3px;
 	right: 6px;
 	z-index: 2;
 	pointer-events: none;
@@ -154,6 +153,8 @@
 	border-right: 2px solid var(--spice-color1) ;
 	pointer-events: none;
 }
+
+
 /*non rounded corners on the backgrounds.*/
 .main-yourLibraryX-listItem,
 .e-9960-box:not(.main-card-cardContainer),
@@ -170,6 +171,24 @@
 .IUWOW7ZOUwEs57jTIQRP { background-color: var(--spice-color3)}
 /*artists images not round*/
 .MxmW8QkHqHWtuhO589PV { border-radius: 6px; }
+/*more compact vertical spacing*/
+.main-yourLibraryX-listItem [role="group"] { min-block-size: 28px }
+
+/*no more "collapse library" button easing. too distracting.*/
+.bRRTUCB99PsPsPVYchRh .oaVwShR89gQxLH2tco5G,
+.bRRTUCB99PsPsPVYchRh .Gj4v3278oIywygaUyBbt {
+    transform: translateX(0) ;
+    -webkit-transform: translateX(0) ;
+    opacity: 1 ;
+    transition: none ; 
+    color: var(--text-base)
+}
+/*collapsing buttons colored when hovering on expanded, and always colored on minimized version*/
+.bRRTUCB99PsPsPVYchRh .oaVwShR89gQxLH2tco5G:hover .Gj4v3278oIywygaUyBbt,
+.bRRTUCB99PsPsPVYchRh .oaVwShR89gQxLH2tco5G:hover .e-9960-text,
+.bDHk5k9wfICYjDSC27zp.WHTLfjA4oq5AQak5E8CQ .WJFlv_VJkA5oNs0XJMsQ:hover,
+.bDHk5k9wfICYjDSC27zp.WHTLfjA4oq5AQak5E8CQ .Gj4v3278oIywygaUyBbt
+{color: var(--spice-color1);}
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- LYRICS SCREEN -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 .VznvlkEh9fhk1AKhhZwe
@@ -187,9 +206,11 @@
 */
 
 /*  -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- PLAYLIST/AUDIOBOOK HEADER -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
-.blfR_YJUsKUvdgTejBSb .w1TBi3o5CTM7zW1EB3Bm { color: #cdcdcd ;}	/* Playlist header subtext color (saves, track count)	*/
-.main-entityHeader-creatorButton { color: var(--spice-color1) ;}	/* Playlist header Creator color						*/
-.playlist-playlist-playlistDescription { color: white ;}			/* Playlist header description color					*/
+.blfR_YJUsKUvdgTejBSb .w1TBi3o5CTM7zW1EB3Bm	{ color: #cdcdcd ;}			/* Playlist header subtext color (saves, track count)	*/
+.main-entityHeader-creatorButton 			{ color: var(--spice-color1) ;}	/* Playlist header Creator color						*/
+.playlist-playlist-playlistDescription		{ color: white ;}				/* Playlist header description color					*/
+.main-actionBar-exploreButton				{	display: none !important; }			/*no playlist summary/preview							*/																		*/
+
 /*.main-entityHeader-image  { border: 1px; border-style: solid; border-color: var(--spice-color1)} /*album art border*/
 /*.e-9960-text.encore-text-headline-large.encore-internal-color-text-base {  text-shadow: 5px 5px var(--spice-color3); } /*playlist name shadow/ artist page artist name shadow as well.*/
 
@@ -220,24 +241,22 @@
 }
 /* static tracklist header, adding nice accented line below*/
 .main-trackList-trackListHeaderRow {
-	border-bottom: 1px solid var(--spice-color1) ;
+	border-bottom: 1px solid var(--spice-color1);
 	color: var(--text-subdued,var(--spice-subtext));
 	height: 36px;
 	right: 50
 }
 
-/*header separator color*/
-.main-trackList-trackListHeader:hover .I7SbihsVaE4CAUqLMa45,.main-trackList-trackList.x15L1JFSJDsSz7tzE69K .I7SbihsVaE4CAUqLMa45 {
-	background: linear-gradient(rgba(var(--spice-rgb-color1),1),rgba(var(--spice-rgb-color1),1)) no-repeat 50%/1px 100%
-}
+/*header separator color + always visible*/
+.main-trackList-trackListHeader:hover	.I7SbihsVaE4CAUqLMa45,.main-trackList-trackList.x15L1JFSJDsSz7tzE69K .I7SbihsVaE4CAUqLMa45
+{ background: linear-gradient(rgba(var(--spice-rgb-color1),1),rgba(var(--spice-rgb-color1),1)) no-repeat 50%/1px 100% }
+.main-trackList-trackListHeader .I7SbihsVaE4CAUqLMa45,.main-trackList-trackList.x15L1JFSJDsSz7tzE69K .I7SbihsVaE4CAUqLMa45 
+{ background: linear-gradient(rgba(var(--spice-rgb-selected-row),.3),rgba(var(--spice-rgb-selected-row),.3)) no-repeat 50%/1px 100% }
+.DxgEznYnAMopcCeLv9Tz  { opacity: 1 } /*option arrow on right side always visible*/
 
 /*new liked songs icon*/
 /* Hide the original Liked Songs image */
-img[src*="liked-songs-300.jpg"] {
-	opacity: 0 !important;
-	position: absolute;
-	z-index: -1;
-}
+img[src*="liked-songs-300.jpg"] { opacity: 0 !important; position: absolute; z-index: -1; }
 
 /* Shared heart overlay logic for all containers */
 .main-entityHeader-image:has(img[src*="liked-songs-300.jpg"]),
@@ -286,14 +305,16 @@ img[src*="liked-songs-300.jpg"] {
 	width: 150%;
 	align-items: center;
 }
-/*search page only*/
-#searchPage .main-trackList-rowImagePlayButton {
+/*search page, and playlist reccomendation section only*/
+#searchPage .main-trackList-rowImagePlayButton,
+.playlist-playlist-recommendedTrackList .main-trackList-rowImagePlayButton{
 	left: 0;
 	top: 0;
 	height: 100%;
 	width: 100%;
 	align-items: center;
 }
+
 .main-trackList-number {width: 36px;text-align: center;} /*centering numbers on track list*/
 
 /*Always show "add to playlist" button*/
@@ -311,14 +332,26 @@ box-sizing: border-box;
 
 
 /*BG of hovered over and selected tracks.*/
-.Xo8dgIGCCWjHXWBoKhaV .main-rootlist-wrapper { --spice-rgb-selected-row: var(--spice-rgb-color1) }
-/*adjusted width for playlists with 1000* songs*/
+.Xo8dgIGCCWjHXWBoKhaV .main-rootlist-wrapper {--spice-rgb-selected-row: var(--spice-rgb-color1);}
+/*adjusted width for playlists with 1000+ songs*/
 .main-trackList-rowSectionIndex {width: 20%;}
 
 /*unavailable songs*/
-.tH1iuxCV8NexP4pzEBa4, .tH1iuxCV8NexP4pzEBa4 *,  .tH1iuxCV8NexP4pzEBa4 .encore-text-body-small * { color: #f00;  }
-.tH1iuxCV8NexP4pzEBa4, .tH1iuxCV8NexP4pzEBa4 .l67ZKWaTyRadDGEcLWcE { background-color:#ff000009; border: 1px solid #f004; }
-.tH1iuxCV8NexP4pzEBa4 .l67ZKWaTyRadDGEcLWcE { background-color:#f005 }
+.main-trackList-trackListRow.tH1iuxCV8NexP4pzEBa4 
+.main-trackList-rowSectionEnd>:not([data-encore-id=buttonTertiary]),
+.main-trackList-trackListRow.tH1iuxCV8NexP4pzEBa4 .main-trackList-rowSectionVariable>:not([data-encore-id=buttonTertiary]),
+.main-trackList-trackListRow.tH1iuxCV8NexP4pzEBa4 .main-trackList-rowSectionIndex>:not([data-encore-id=buttonTertiary]),
+.main-trackList-trackListRow.tH1iuxCV8NexP4pzEBa4 .main-trackList-rowSectionStart>:not([data-encore-id=buttonTertiary]) 
+{ opacity: 1 }
+
+.tH1iuxCV8NexP4pzEBa4 .e-9960-text *,
+.tH1iuxCV8NexP4pzEBa4 .e-9960-text,
+.tH1iuxCV8NexP4pzEBa4 .main-trackList-curationButton,
+.tH1iuxCV8NexP4pzEBa4 .main-trackList-rowMoreButton
+{ color: #f00a;  }
+
+.tH1iuxCV8NexP4pzEBa4, .tH1iuxCV8NexP4pzEBa4 .l67ZKWaTyRadDGEcLWcE
+{background-color:#f001;border: 1px solid #f004;}
 
 
 /* Hide Lottie animations in both main-trackList-curationButton and icon-only tertiary buttons */
@@ -352,10 +385,30 @@ box-sizing: border-box;
 /*Don't add the spinner to select extensions*/
 [aria-label="Phrase2Playlist"]::after {
 	content: none !important;
-	display: none !important;
+	display: none !important; !important;
 	animation: none !important;
 }
 
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- RECOMMENDATIONS  -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
+/*repositions title, deletes subtitle*/
+.playlist-playlist-recommendedTrackList .playlist-playlist-header {margin-top:5px }
+.playlist-playlist-recommendedTrackList .playlist-playlist-subtitle {display:none }
+ /*move reccomendations upwards, but "Find more" button downwards.*/
+.playlist-playlist-seeMore				{ color: var(--spice-text); margin: 24px 0px 0 0;  position:absolute; right:35px}
+.playlist-playlist-recommendedTrackList	{ gap: 5px;  margin-top: 10px; border-top: solid  1px var(--spice-color1);}
+
+/*adds cursor pointer to "find more" button*/
+.playlist-playlist-seeMore .encore-text-body-small-bold			{ font-size:15px;}
+/*refresh button moved up top, next to "find more". makes more sense this way.*/
+.Button-buttonTertiary-medium-useBrowserDefaultFocusStyle		
+{ color: var(--spice-text); margin: 0px 90px 0 0;  position:absolute; right:35px; font-size:15px; padding: 0px}
+
+/*both buttons saze and color change when hovering*/
+.Button-buttonTertiary-medium-useBrowserDefaultFocusStyle:hover,
+.playlist-playlist-seeMore .encore-text-body-small-bold:hover 
+{ transform: scale(1.05); color:var(--spice-color1); cursor: pointer }
+
+/*.playlist-playlist-recommendedTrackList .main-trackList-isRecommendedTrackListRow { margin-left:2px; margin-right:2px; }
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- PLAYBAR SECTION  _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- NOW PLAYING -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
@@ -370,7 +423,37 @@ box-sizing: border-box;
  .main-trackInfo-name .main-trackInfo-overlay .cpltqpeZsQmmXy7qZgb9 .main-trackInfo-contentWrapper  .encore-text-body-small { font-size: 20px; --spice-text: var(--spice-color1) ; }
  .main-trackInfo-artists { font-size: 16px; --spice-text: var(--spice-color1) ; }
 
-/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- PROGRESS BAR  -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
+/*Remove redundant stuff. ('Hide now playing', like, extra options, fullscreen*/
+.KILnOHUdx4pspVEoJ7kq .Button-buttonTertiary-small-iconOnly-useBrowserDefaultFocusStyle,  .O5NOY8Xw4NH0IhBZu8tm    { display: none !important;}
+
+/*stops the slidey transforms of top and "share song" buttons.*/
+.j9Ey7DzF10wbxpBIVtcb, .DFvRASpHOFAoziM4w7En {
+transform: translateX(0) ;
+-webkit-transform: translateX(0) ;
+opacity: 1 ;
+transition: none ; 
+-webkit-transition: none; 
+-webkit-margin-start: 0;
+margin-inline-start: 0;
+}
+
+.DFvRASpHOFAoziM4w7En { width: 24px;  color: var(--spice-color1) !important; }
+@container (width < 320px) 
+{ 
+	.NowPlayingView:has(:focus-visible) .DFvRASpHOFAoziM4w7En,.NowPlayingView:hover .DFvRASpHOFAoziM4w7En 
+		{ width: 24px;  color: var(--spice-color1) !important; }
+}
+
+.W3E0IT3_STcazjTeyOJa .main-trackInfo-overlay .e-9960-text { font-style: italic;}
+.W3E0IT3_STcazjTeyOJa .main-trackInfo-overlay .e-9960-text:hover { color: var(--spice-color1)}
+
+/* "Now playing" sidebar only shows album image and song name and "About artist" No more queue, merch, tour, credis*/
+.main-nowPlayingView-section.main-nowPlayingView-queue,
+.main-nowPlayingView-section.main-nowPlayingView-merch,
+.main-nowPlayingView-section.main-nowPlayingView-artistOnTour,
+.main-nowPlayingView-section.main-nowPlayingView-credits
+{	display: none !important; }
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- PROGRESS BAR  -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */ 
 /*lowers progress bar and its numbers, so that playbar addons aren't behind the playbar*/
 .main-nowPlayingBar-center .progress-bar { position: relative; top: 5px; }
 .playback-bar__progress-time-elapsed, .main-playbackBarRemainingTime-container { position: relative; top: 7px; }
@@ -391,7 +474,7 @@ box-sizing: border-box;
 	background-color: #4d4d4d ;						/* progress bar BG*/
 }
 /*Removes the white dot to only have FG and BG color*/
-.progress-bar__slider { display: none !important; }
+.progress-bar__slider { display: none !important; !important; }
 
 /*Thicker bars*/
 .x-progressBar-progressBarBg	{ height: 100% ; --progress-bar-radius: 0px ; }
@@ -403,21 +486,40 @@ box-sizing: border-box;
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- EXTRAS ON RIGHT  -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 .main-nowPlayingBar-right { bottom:20px;  position: relative; }
 
+/*removes tiny little dot under active options. Why are they there if the buttons are colored anyways.*/
+.main-genericButton-button.main-genericButton-buttonActiveDot:after,	/*extra settings*/
+.E1ikFpkPVaoLplbQdrTP:after,											/*shuffle*/
+.fZjbVIqD8Xc3auRZOxu5:before, .vW9NFcNIj8useE43Vx9G:before				/*loop*/
+{ display: none !important; }
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- FULLSCREEN MODE  -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
-.QdB2YtfEq0ks5O4QbtwX.poe3QmyrczMfT4aZNIok._6dEq1ZVxeUsyP_cwJlgR, div {
---cinema-mode-bg-color-from: var(--spice-main);
---cinema-mode-bg-color-to: var(--spice-main);
-}
+.QdB2YtfEq0ks5O4QbtwX.poe3QmyrczMfT4aZNIok._6dEq1ZVxeUsyP_cwJlgR, div {--cinema-mode-bg-color-from: var(--spice-main);--cinema-mode-bg-color-to: var(--spice-main);n); */}
 .hlDzKEohazBhJodv4mhe {--header-text-color: #ffffff;}
 
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- SEARCH RESULT  -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
+/*less vertical gap*/
+.main-gridContainer-gridContainer.T2cpdJTvNpOFPvN4WJM4 { gap: 0px 8px !important; }
+/*less padding*/
+.search-searchCategory-SearchCategory { padding-bottom: 5px; padding-top: 5px; }
+
+/*Remove Profiles, Audiobooks, Episodes and Podcasts from search result page.*/
+/*.main-shelf-shelf:has(h2 a[href*="/artists"]),*/
+.main-shelf-shelf:has(h2 a[href*="/users"]),
+.main-shelf-shelf:has(h2 a[href*="/audiobooks"]),
+.main-shelf-shelf:has(h2 a[href*="/episodes"]),
+.main-shelf-shelf:has(h2 a[href*="/podcasts"])
+{ display: none !important;}
+
+
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- EQUALIZERS  -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
+
+
 /*ON HOME PAGE*/
 /*Would hide original, but shortcut are gone anyways*/
-.view-homeShortcutsGrid-equaliser { display:none; }
+.view-homeShortcutsGrid-equaliser { display: none !important; }
 
 /*IN PLAYLIST*/
 /*Hides original equalizer*/
-.main-trackList-playingIcon { display:none ; pointer-events: none ; }
+.main-trackList-playingIcon { display: none !important; ; pointer-events: none ; }
 
 /*Adds playing equalizer*/
 .main-trackList-active::before {
@@ -448,8 +550,8 @@ box-sizing: border-box;
 	z-index: -1 ;
 }
 
-/*Don't play equalizer and ball on search page.*/
-#searchPage .main-trackList-active::before { display:none; }
+/*Don't play equalizer and ball on search page. and under reccomendation album image. (they were covered)*/
+#searchPage .main-trackList-active::before, .main-trackList-isRecommendedTrackListRow.main-trackList-active::before  { display:none; }
 #searchPage .main-trackList-active::after { display:none; }
 
 /* When .main-trackList-number is NOT present, hide the paused GIF */
@@ -458,3 +560,5 @@ box-sizing: border-box;
 .main-trackList-active .main-trackList-rowImagePlayButton,
 .main-trackList-active .main-trackList-number
 { opacity: 0 !important; }
+
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- END  -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
