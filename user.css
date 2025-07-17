@@ -4,7 +4,6 @@
  * Copyright: 2025 MrFunreal. All rights reserved.                *
  * License: CC BY-NC-ND 4.0 International                         *
  * (https://creativecommons.org/licenses/by-nc-nd/4.0/)           *
- * For licensing inquiries, contact: https://github.com/Mrfunreal *
  ******************************************************************
  */
 
@@ -15,21 +14,20 @@
 }
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- BASE COLOR CHANGES -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 :root,
-.encore-dark-theme .encore-bright-accent-set,
-.hW9km7ku6_iggdWDR_Lg {
-	--spice-sidebar: #000000 !important;						/* Outside Background around everything, behind progress bar*/
-	--spice-main: #101010 !important;							/* inside background, behind library and track list WARNING: CHANGING THIS VALUE REQUIRES RECOLORING OF FILL ON EQUALIZER AND PAUSE BALLS!*/
-	--spice-card: var(--spice-color3) !important; 				/* popup text boxes*/
-	--spice-subtext: #cdcdcd !important;						/* Artist name, lots of icons, lots of less important text*/
-	--background-highlight: var(--spice-color1) !important;		/* highlight in library*/
-	--spice-highlight-elevated: var(--spice-color3) !important;	/*Highlighted search bar, marketplace button, ect*/
-	/*  --spice-main-elevated: var(--spice-color3) !important;	/* bg of interactive things. (hovered over texts, search box, ect*/
-	--is-active-fg-color: var(--spice-color1) !important;		/* Not sure tbh*/
-	--spice-button-active: var(--spice-color1) !important;		/*Active items (Playist name, shuffle button, checkmarks, ect)*/
-	--spice-button: var(--spice-color1) !important;				/*Not sure, but it was green. That's inacceptable*/
-	--background-base: var(--spice-color2) !important;			/* pause button base*/
-	--background-highlight: var(--spice-color1) !important;		/* pause button hover*/
-	--background-press: var(--spice-color2) !important;			/* pause button click*/
+.encore-dark-theme .encore-bright-accent-set, .hW9km7ku6_iggdWDR_Lg {
+	--spice-sidebar:			#000000				!important;	/* Outside Background around everything, behind progress bar		*/
+	--spice-main:				#101010				!important;	/* inside background, behind library and track list WARNING: CHANGING THIS VALUE REQUIRES RECOLORING OF FILL ON EQUALIZER AND PAUSE BALLS!	*/
+	--spice-card:				var(--spice-color3)	!important; /* popup text boxes													*/
+	--spice-subtext:			#cdcdcd				!important;	/* Artist name, lots of icons, lots of less important text			*/
+	--background-highlight:		var(--spice-color1)	!important;	/* highlight in library												*/
+	--spice-highlight-elevated:	var(--spice-color3)	!important;	/* Highlighted search bar, marketplace button, ect					*/
+/*	--spice-main-elevated:		var(--spice-color3)	!important;	/* bg of interactive things. (hovered over texts, search box, ect	*/
+	--is-active-fg-color:		var(--spice-color1)	!important;	/* Not sure tbh														*/
+	--spice-button-active:		var(--spice-color1)	!important;	/* Active items (Playist name, shuffle button, checkmarks, ect)		*/
+	--spice-button:				var(--spice-color1)	!important;	/* Not sure, but it was green. That's inacceptable					*/
+	--background-base:			var(--spice-color2)	!important;	/* pause button base												*/
+	--background-highlight:		var(--spice-color1)	!important;	/* pause button hover												*/
+	--background-press:			var(--spice-color2)	!important;	/* pause button click												*/
 }
 
 /*link texts, like "change" when adding songs to playlist*/
@@ -43,6 +41,7 @@
 
 /*playlist/album creator link*/
 .main-entityHeader-creatorButton:hover { text-decoration: underline; }
+
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- RANDOM STUFF -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
  /*follow button*/
 .Button-sc-y0gtbx-0:hover { background-color: var(--spice-color3); border: 1px solid;}
@@ -209,15 +208,17 @@
 .blfR_YJUsKUvdgTejBSb .w1TBi3o5CTM7zW1EB3Bm	{ color: #cdcdcd ;}			/* Playlist header subtext color (saves, track count)	*/
 .main-entityHeader-creatorButton 			{ color: var(--spice-color1) ;}	/* Playlist header Creator color						*/
 .playlist-playlist-playlistDescription		{ color: white ;}				/* Playlist header description color					*/
-.main-actionBar-exploreButton				{	display: none !important; }			/*no playlist summary/preview							*/																		*/
+.main-actionBar-exploreButton				{	display: none !important; }			/*no playlist summary/preview							*/																		
 
 /*.main-entityHeader-image  { border: 1px; border-style: solid; border-color: var(--spice-color1)} /*album art border*/
 /*.e-9960-text.encore-text-headline-large.encore-internal-color-text-base {  text-shadow: 5px 5px var(--spice-color3); } /*playlist name shadow/ artist page artist name shadow as well.*/
 
 /*top header less height*/
-.main-entityHeader-container.JYKKZFIXuf9lIHVeszuS {max-height: 260px;min-height: 200px}
+.main-entityHeader-container.JYKKZFIXuf9lIHVeszuS { max-height: 260px; min-height: 200px }
+
 /*buttons below header, less height!*/
 .main-actionBar-ActionBar {padding-bottom: 1px;padding-top: 1px;}
+
 
 /*header changes*/
 .main-entityHeader-backgroundColor, .main-home-homeHeader, .main-actionBarBackground-background,   /*Playlist header*/
@@ -424,7 +425,7 @@ box-sizing: border-box;
  .main-trackInfo-artists { font-size: 16px; --spice-text: var(--spice-color1) ; }
 
 /*Remove redundant stuff. ('Hide now playing', like, extra options, fullscreen*/
-.KILnOHUdx4pspVEoJ7kq .Button-buttonTertiary-small-iconOnly-useBrowserDefaultFocusStyle,  .O5NOY8Xw4NH0IhBZu8tm    { display: none !important;}
+.KILnOHUdx4pspVEoJ7kq .Button-buttonTertiary-small-iconOnly-useBrowserDefaultFocusStyle,  .O5NOY8Xw4NH0IhBZu8tm, .DFvRASpHOFAoziM4w7En   { display: none !important;}
 
 /*stops the slidey transforms of top and "share song" buttons.*/
 .j9Ey7DzF10wbxpBIVtcb, .DFvRASpHOFAoziM4w7En {
@@ -437,13 +438,14 @@ transition: none ;
 margin-inline-start: 0;
 }
 
+/* would color and reposition "share" button. But much like the other removed additions, its available by right clicking the song.
 .DFvRASpHOFAoziM4w7En { width: 24px;  color: var(--spice-color1) !important; }
 @container (width < 320px) 
 { 
 	.NowPlayingView:has(:focus-visible) .DFvRASpHOFAoziM4w7En,.NowPlayingView:hover .DFvRASpHOFAoziM4w7En 
 		{ width: 24px;  color: var(--spice-color1) !important; }
 }
-
+*/
 .W3E0IT3_STcazjTeyOJa .main-trackInfo-overlay .e-9960-text { font-style: italic;}
 .W3E0IT3_STcazjTeyOJa .main-trackInfo-overlay .e-9960-text:hover { color: var(--spice-color1)}
 
