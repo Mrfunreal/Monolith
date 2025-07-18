@@ -1,7 +1,7 @@
 {
 	"name":			"Monolith",
 	"description":	"Dark, sleek, simple, customizable.",
-	"preview":		"./img/Thumbnail.png",
+	"preview":		"./img/logo.png",
 	"readme":		"./README.md",
 	"usercss":		"./user.css",
 	"schemes":		"./color.ini",
