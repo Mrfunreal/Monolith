@@ -1,4 +1,4 @@
-<img src="./img/Monolith.png" height="200">
+<p align="center"><img src="./img/Monolith.png" height="200"></p>
 
 # Monolith
 
