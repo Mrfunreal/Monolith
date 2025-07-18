@@ -2,10 +2,10 @@
 <div class="grid" markdown>
 <img src="./img/prev_Playlist.png" width="auto" height="440"> <img src="./img/Colors.png" width="auto" height="440">
 </div>
-Author: [MrFunreal](https://github.com/Mrfunreal) [Repo](https://github.com/Mrfunreal/Monolith)
+Author: [MrFunreal](https://github.com/Mrfunreal) [Repo](https://github.com/Mrfunreal/Monolith)<br>
 
-# More Preview images
-<details><summary>Expand me ♫</summary>
+
+<details><summary>Preview Images</summary>
 <img src="./img/homepage.png">
 <img src="./img/Library_big.png">
 <img src="./img/liked.png">
@@ -13,9 +13,6 @@ Author: [MrFunreal](https://github.com/Mrfunreal) [Repo](https://github.com/Mrfu
 <img src="./img/prev_Playlist.png">
 <img src="./img/profile.png">
 <img src="./img/search.png">
-
-
-
 </details>
 
 ## Notable features
