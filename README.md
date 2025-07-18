@@ -1,14 +1,9 @@
-<img src="./img/Monolith.png" height="200">
-
-# Monolith
-
-A sleek and simple theme for Spicetify.<br> 
-Most everything is dark, with some colorful highlights, the color of which you can modify.
+<p align="center"><img src="./img/Monolith.png" height="200"></p>
 <div class="grid" markdown>
 <img src="./img/prev_Playlist.png" width="auto" height="440"> <img src="./img/Colors.png" width="auto" height="440">
 </div>
 
-# Preview images
+# More Preview images
 <details><summary>Expand me ♫</summary>
 <img src="./img/homepage.png">
 <img src="./img/Library_big.png">
@@ -70,7 +65,7 @@ Main results are only "Featuring x", Artists, Albums, Playlists, and "Genres & M
 - Some progress bar additions, like the Kirby gif, seem to move up and down.
 
 ## Installation
-It's recommended to find and install this theme on the [Spicetify Marketplace](https://github.com/CharlieS1103/spicetify-marketplace).<br> 
+It's recommended to find and install this theme on the [Spicetify Marketplace](https://github.com/spicetify/marketplace).<br> 
 Which will also allow you to set scheme color in the app, without requiring a Spicetify reboot.
 
 
