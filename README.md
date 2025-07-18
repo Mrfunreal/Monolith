@@ -15,6 +15,10 @@ Most everything is dark, with some colorful highlights, the color of which you c
 <img src="./img/liked.png">
 <img src="./img/lyrics.png">
 <img src="./img/prev_Playlist.png">
+<img src="./img/profile.png">
+<img src="./img/search.png">
+
+
 
 </details>
 
@@ -27,6 +31,7 @@ Most everything is dark, with some colorful highlights, the color of which you c
 	- Liked songs playlist has new image, fitting scheme (gradient with heart icon).
 	- Lyrics screen fitting theme.
 	- Like and Unlike checkmark anims swapped for basic wait circle. (Couldn't be recolored, Hardcoded to be green, Looked odd.)
+	- Removed "background noise" image on band header pages. (It was some generic shadow gradient)
 - Home screen:
 	- Removed "Shortcuts" on top of home screen.
 	- Removed "Jump Back in".

@@ -15,7 +15,7 @@
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- BASE COLOR CHANGES -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 :root,
 .encore-dark-theme .encore-bright-accent-set, .hW9km7ku6_iggdWDR_Lg {
-	--spice-sidebar:			#000000				!important;	/* Outside Background around everything, behind progress bar		*/
+	--spice-sidebar:			#020202				!important;	/* Outside Background around everything, behind progress bar		*/
 	--spice-main:				#101010				!important;	/* inside background, behind library and track list WARNING: CHANGING THIS VALUE REQUIRES RECOLORING OF FILL ON EQUALIZER AND PAUSE BALLS!	*/
 	--spice-card:				var(--spice-color3)	!important; /* popup text boxes													*/
 	--spice-subtext:			#cdcdcd				!important;	/* Artist name, lots of icons, lots of less important text			*/
@@ -28,8 +28,8 @@
 	--background-base:			var(--spice-color2)	!important;	/* pause button base												*/
 	--background-highlight:		var(--spice-color1)	!important;	/* pause button hover												*/
 	--background-press:			var(--spice-color2)	!important;	/* pause button click												*/
+	--background-noise:			#transparent !important;			/*no background noise on images.*/
 }
-
 /*link texts, like "change" when adding songs to playlist*/
 .encore-light-theme, .encore-light-theme .encore-base-set { --text-bright-accent: var(--spice-color2) !important; }  
 .main-loadingIndicator-circle { fill: var(--spice-color1) } /*loading dots color*/
@@ -65,6 +65,7 @@
 
 /*Loopy Loop extension edits - making it fit to new bigger progressbar*/
 #loopy-loop-start, #loopy-loop-end { color: #fff !important; font-size-adjust: .6 !important; padding-top: 2px !important; }
+
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- HOME SCREEN -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 .view-homeShortcutsGrid-shortcuts	{	display: none !important; }	/*no shortcuts on home screen. "Jump back in" and "Recently played" do the same and have no laggy gif	*/
 .SsbbQFeJun2Ts_EIktpr				{	display: none !important; }	/*no laggy video reccomendation on bottom of homepage													*/
@@ -73,6 +74,11 @@
 [data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href='/section/0JQ5DAuChZYPe9iDhh2mJz']) { display: none !important; !important; }
 /*No "Jump back in"*/
 [data-testid='home-page'] .contentSpacing > [data-testid='component-shelf']:has([href="/section/0JQ5DAIiKWzVFULQfUm85X"])  { display: none !important; !important; }
+
+/*colored sidebar scale lines*/
+.LayoutResizer__inline-end:after,.LayoutResizer__inline-start:after { background-color: var(--spice-color1); }
+/*0px vertical spacing between image boxes*/
+.main-home-content.contentSpacing { gap: 0px 8px !important; }
 
 
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- SCROLLBAR SETTINGS -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
@@ -193,11 +199,11 @@
 .VznvlkEh9fhk1AKhhZwe
 {
 	--lyrics-color-active: var(--spice-color1) !important; 			/* currently playing lyrics */
-	--lyrics-color-inactive: #aaaaaa !important;					/* not yet playing lyrics */
+	--lyrics-color-inactive: #ffffff !important;					/* not yet playing lyrics */
 	--lyrics-color-background: var(--spice-main) !important;		/* Background color of lyrics screen */
 	--lyrics-color-passed: rgb(255 255 255 / 75%) !important;		/* No idea */
 	--lyrics-color-messaging: rgb(255 255 255 / 75%) !important;	/* No idea */
-	text-shadow: 5px 5px var(--spice-color3)
+	/*text-shadow: 5px 5px 5px var(--spice-color3);*/
 }
 /* This would be custom "no lyrics" text, but i scrapped the idea.
 .vkO5F4KbLk8mbjZoy1Lf { position: relative; color: transparent !important; text-shadow: 0px 0px;  text-align:center; align-content:center}
@@ -211,7 +217,7 @@
 .main-actionBar-exploreButton				{	display: none !important; }			/*no playlist summary/preview							*/																		
 
 /*.main-entityHeader-image  { border: 1px; border-style: solid; border-color: var(--spice-color1)} /*album art border*/
-/*.e-9960-text.encore-text-headline-large.encore-internal-color-text-base {  text-shadow: 5px 5px var(--spice-color3); } /*playlist name shadow/ artist page artist name shadow as well.*/
+/*.e-9960-text.encore-text-headline-large.encore-internal-color-text-base {  text-shadow: 4px 4px 5px var(--spice-color3); } /*playlist name shadow/ artist page artist name shadow as well.*/
 
 /*top header less height*/
 .main-entityHeader-container.JYKKZFIXuf9lIHVeszuS { max-height: 260px; min-height: 200px }
@@ -229,7 +235,6 @@
 	background-color: var(--spice-main) !important;
 	background: var(--spice-main) !important;
 }
-
 /*background color on "follower" header that appears when scrolling*/
 .main-topBar-overlay { background-color: var(--spice-main) ; height: 100% }
 /*bottom part of that follower with tracklist and such*/
@@ -349,7 +354,7 @@ box-sizing: border-box;
 .tH1iuxCV8NexP4pzEBa4 .e-9960-text,
 .tH1iuxCV8NexP4pzEBa4 .main-trackList-curationButton,
 .tH1iuxCV8NexP4pzEBa4 .main-trackList-rowMoreButton
-{ color: #f00a;  }
+{ color: #f00a !important;  }
 
 .tH1iuxCV8NexP4pzEBa4, .tH1iuxCV8NexP4pzEBa4 .l67ZKWaTyRadDGEcLWcE
 {background-color:#f001;border: 1px solid #f004;}
