@@ -1,6 +1,6 @@
 <p align="center"><img src="./img/Monolith.png" height="300"></p>
  <div class="grid" markdown>
-<img src="./img/Colors.png" height="420""> <img src="./img/prev_Playlist.png" height="420">
+<img src="./img/Colors.png" height="400""> <img src="./img/prev_Playlist.png" height="400">
  </div>
 
 
