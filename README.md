@@ -1,21 +1,27 @@
-<p align="center"><img src="./img/Monolith.png" height="200"></p>
+<p align="center"><img src="./img/Monolith.png" height="300"></p>
 <div class="grid" markdown>
-<img src="./img/prev_Playlist.png" width="auto" height="440"> <img src="./img/Colors.png" width="auto" height="440">
+<img src="./img/Colors.png" width="auto" height="440">  <img src="./img/prev_Playlist.png" width="auto" height="440"> 
 </div>
-Author: [MrFunreal](https://github.com/Mrfunreal) [Repo](https://github.com/Mrfunreal/Monolith)<br>
 
 
-<details><summary>Preview Images</summary>
-<img src="./img/homepage.png">
-<img src="./img/Library_big.png">
+<p align="center">Dark theme with 15 accent colors to choose from.
+<br> Author: <a href="https://github.com/Mrfunreal">MrFunreal</a> <a href="https://github.com/Mrfunreal/Monolith">Repo</a></p>
+
+
+
+
+
+<details><summary>Screenshots</summary>
 <img src="./img/liked.png">
 <img src="./img/lyrics.png">
-<img src="./img/prev_Playlist.png">
 <img src="./img/profile.png">
 <img src="./img/search.png">
+<img src="./img/homepage.png">
+<img src="./img/Library_big.png">
+<img src="./img/prev_Playlist.png">
 </details>
 
-## Notable features
+# Notable features
 - General:
 	- Font changed to "Noto Sans" for nicer readability.
 	- Your own avatar on top right is larger.
@@ -54,15 +60,15 @@ Main results are only "Featuring x", Artists, Albums, Playlists, and "Genres & M
 - Now Playing Sidebar
 	- Only shows song data and artist data. No more queue, merch, tour, credits, or redundand buttons.
 
-#### Notes
+## Notes
 - Modified "Loopy loop" queue points to fit new progress bar.
-- Progress bar lowered specifically so Oneko can show up without being covered.
+- Progress bar lowered specifically so Oneko can show up without being covered. It's not actually part of my theme, but a cat needs a bed.
 
 ## Known Issues
 - "Add to library" wait circle _might_ attach to elements added by extensions, and scale is a little off for "like playlists".
 - Some progress bar additions, like the Kirby gif, seem to move up and down.
 
-## Installation
+# Installation
 It's recommended to find and install this theme on the [Spicetify Marketplace](https://github.com/spicetify/marketplace).<br> 
 Which will also allow you to set scheme color in the app, without requiring a Spicetify reboot.
 
@@ -80,6 +86,7 @@ git clone https://github.com/Mrfunreal/Monolith
 ```
 
 **Changing schemes manually**
+This only applies if you're not using the marketplace to install the theme.
 ```Powershell
 spicetify config current_theme Monolith
 spicetify config color_scheme XXXXXX
@@ -87,4 +94,34 @@ spicetify apply
 ```
 Replace XXXXXX with whichever color combination you would like. Eg. `spicetify config color_scheme Red-Orange`
 
-
+<details><summary>Color Names</summary>
+<br>malachite
+<br>malachite-light
+<br>azure
+<br>red
+<br>red-light
+<br>pink
+<br>pink-light
+<br>fuchsia
+<br>fuchsia-light
+<br>violet
+<br>violet-light
+<br>blue
+<br>blue-light
+<br>bluebolt
+<br>bluebolt-light
+<br>aqua
+<br>aqua-light
+<br>guppiegreen
+<br>guppiegreen-light
+<br>electricgreen
+<br>electricgreen-light
+<br>chartreuse
+<br>chartreuse-light
+<br>yellow
+<br>yellow-light
+<br>orange
+<br>orange-light
+<br>orangered
+<br>orangered-light
+</details>
