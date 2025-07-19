@@ -1,7 +1,7 @@
 <p align="center"><img src="./img/Monolith.png" height="300"></p>
-<div class="grid" markdown>
-<img src="./img/Colors.png" width="auto" height="440">  <img src="./img/prev_Playlist.png" width="auto" height="440"> 
-</div>
+ <div class="grid" markdown>
+<img src="./img/Colors.png" height="450""> <img src="./img/prev_Playlist.png" height="450">
+ </div>
 
 
 <p align="center">Dark theme with 15 accent colors to choose from.
