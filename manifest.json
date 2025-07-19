@@ -1,10 +1,10 @@
 {
 	"name":			"Monolith",
-	"description":	"Dark, sleek, simple, customizable.",
+	"description":	"Dark, Compact, Simple, 15 color choices.",
 	"preview":		"./img/logo.png",
 	"readme":		"./README.md",
 	"usercss":		"./user.css",
 	"schemes":		"./color.ini",
 	"authors":		[ { "name": "MrFunreal", "url": "https://github.com/Mrfunreal" } ],
-	"tags": ["dark", "accented", "customizable"]
+	"tags": ["dark", "accented", "schemes"]
 }
