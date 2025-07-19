@@ -56,8 +56,7 @@
 - Elapsed/Remaining time numbers larger
 
 ### Search Result Page
-- Removed Profiles, Audiobooks, Episodes and Podcasts. The top header still has filters to view just those.<br>
-Main results are only "Featuring x", Artists, Albums, Playlists, and "Genres & Moods" is available.
+- Removed Profiles, Audiobooks, Episodes and Podcasts. USe the headers filters, if you need to.<br>Main results are only "Featuring x", Artists, Albums, Playlists, and "Genres & Moods" is available.
 
 ### Now Playing Sidebar
 - Only shows song data and artist data. No more queue, merch, tour, credits, or redundand buttons.
