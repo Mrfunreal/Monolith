@@ -1,15 +1,9 @@
 <p align="center"><img src="./img/Monolith.png" height="300"></p>
- <div class="grid" markdown>
-<img src="./img/Colors.png" height="350""> <img src="./img/prev_Playlist.png" height="350">
- </div>
+<img src="./img/prev_Playlist.png">
 <hr>
 
 <p align="center">Dark theme with 15 accent colors to choose from.
 <br> Author: <a href="https://github.com/Mrfunreal">MrFunreal</a> <a href="https://github.com/Mrfunreal/Monolith">Repo</a></p>
-
-
-
-
 
 <details><summary>Screenshots</summary>
 <img src="./img/liked.png">
@@ -22,15 +16,17 @@
 </details>
 
 # Notable features
+<img src="./img/Colors.png" height="800" align="right">
+
 - General:
 	- Font changed to "Noto Sans" for nicer readability.
 	- Your own avatar on top right is larger.
 	- Profile images on user pages are now square.
 	- Thinner scrollbars.
-	- Liked songs playlist has new image, fitting scheme (gradient with heart icon).
+	- Liked songs playlist has new image, fitting scheme.
 	- Lyrics screen fitting theme.
-	- Like and Unlike checkmark anims swapped for basic wait circle. (Couldn't be recolored, Hardcoded to be green, Looked odd.)
-	- Removed "background noise" image on band header pages. (It was some generic shadow gradient)
+	- Like and Unlike checkmark anims swapped for basic wait circle, due to limitations.
+	- Removed "background noise" image on band header pages.
 - Home screen:
 	- Removed "Shortcuts" on top of home screen.
 	- Removed "Jump Back in".
@@ -48,11 +44,11 @@
 	- Eye icon `👁` displayed on currently looked at library item.
 	- Artist images are now square.
 	- Text sidebar more compact. (from 32px to 26px height )
-	- Collapse/Expand library button is always shown, and doesn't slide around anymore. Too distracting
+	- Collapse/Expand library button is always shown, and doesn't slide around anymore.
 - Bottom Media Bar
 	- Song info on bottom left has border around cover art and stylized coloring.
 	- Progress bar wider and way thicker for easier skipping through songs.
-	- Removed useless little dot under active options (Crossplay, Lyrics, Ect) The buttons are colored, why the dots?.
+	- Removed useless little dot under active options. (Crossplay, Lyrics, Ect)
 	- Elapsed/Remaining time numbers larger
 - Search Result Page
 	- Removed Profiles, Audiobooks, Episodes and Podcasts. The top header still has filters to view just those.<br>
@@ -63,8 +59,6 @@ Main results are only "Featuring x", Artists, Albums, Playlists, and "Genres & M
 ## Notes
 - Modified "Loopy loop" queue points to fit new progress bar.
 - Progress bar lowered specifically so Oneko can show up without being covered. It's not actually part of my theme, but a cat needs a bed.
-
-## Known Issues
 - "Add to library" wait circle _might_ attach to elements added by extensions, and scale is a little off for "like playlists".
 - Some progress bar additions, like the Kirby gif, seem to move up and down.
 
@@ -94,7 +88,7 @@ spicetify apply
 ```
 Replace XXXXXX with whichever color combination you would like. Eg. `spicetify config color_scheme Red-Orange`
 
-<details><summary>Color Names</summary>
+<details><summary>Color Names to Copy-Paste</summary>
 <br>malachite
 <br>malachite-light
 <br>azure
