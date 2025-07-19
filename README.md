@@ -1,8 +1,8 @@
 <p align="center"><img src="./img/Monolith.png" height="300"></p>
  <div class="grid" markdown>
-<img src="./img/Colors.png" height="400""> <img src="./img/prev_Playlist.png" height="400">
+<img src="./img/Colors.png" height="350""> <img src="./img/prev_Playlist.png" height="350">
  </div>
-
+<hr>
 
 <p align="center">Dark theme with 15 accent colors to choose from.
 <br> Author: <a href="https://github.com/Mrfunreal">MrFunreal</a> <a href="https://github.com/Mrfunreal/Monolith">Repo</a></p>
