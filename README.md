@@ -3,7 +3,9 @@
 <hr>
 
 <p align="center">Dark theme with 15 accent colors to choose from.
-<br> Author: <a href="https://github.com/Mrfunreal">MrFunreal</a> <a href="https://github.com/Mrfunreal/Monolith">Repo</a></p>
+<br> Author: <a href="https://github.com/Mrfunreal">MrFunreal</a> <a href="https://github.com/Mrfunreal/Monolith">Repo</a>
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/A0A11XXM4Q)</p>
 
 <details><summary>Screenshots</summary>
 <img src="./img/liked.png">
