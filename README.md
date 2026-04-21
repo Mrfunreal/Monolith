@@ -1,11 +1,11 @@
 <p align="center"><img src="./img/Monolith.png" height="300"></p>
 <img src="./img/prev_Playlist.png">
 <hr>
+<a href="https://ko-fi.com/A0A11XXM4Q">  <img src="https://raw.githubusercontent.com/Mrfunreal/Various/refs/heads/main/images/Ko-Fi_smaller.png" width="50%"></a><br>
 
 <p align="center">Dark theme with 15 accent colors to choose from.
-<br> Author: <a href="https://github.com/Mrfunreal">MrFunreal</a> <a href="https://github.com/Mrfunreal/Monolith">Repo</a>
+<br> Author: <a href="https://github.com/Mrfunreal">MrFunreal</a> <a href="https://github.com/Mrfunreal/Monolith">Repo</a><br>
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/A0A11XXM4Q)</p>
 
 <details><summary>Screenshots</summary>
 <img src="./img/liked.png">
